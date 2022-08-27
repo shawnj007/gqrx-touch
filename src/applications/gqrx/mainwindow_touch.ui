@@ -95,6 +95,291 @@
    <addaction name="menu_View"/>
    <addaction name="menu_Help"/>
   </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="toolTip">
+    <string>Quit application</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About Gqrx</string>
+   </property>
+   <property name="toolTip">
+    <string>Information about Gqrx</string>
+   </property>
+  </action>
+  <action name="actionAboutQt">
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+   <property name="toolTip">
+    <string>About the Qt toolkit</string>
+   </property>
+  </action>
+  <action name="actionDSP">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/play.svg</normaloff>:/icons/icons/play.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Start DSP</string>
+   </property>
+   <property name="toolTip">
+    <string>Start DSP</string>
+   </property>
+   <property name="statusTip">
+    <string>Start/stop DSP processing</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionAFSK1200">
+   <property name="text">
+    <string>AFSK1200 Decoder</string>
+   </property>
+   <property name="toolTip">
+    <string>Start AFSK1200 decoder</string>
+   </property>
+  </action>
+  <action name="actionSched">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/clock.svg</normaloff>:/icons/icons/clock.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Scheduler</string>
+   </property>
+   <property name="toolTip">
+    <string>Schedule recordings and other actions</string>
+   </property>
+  </action>
+  <action name="actionIoConfig">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/flash.svg</normaloff>:/icons/icons/flash.svg</iconset>
+   </property>
+   <property name="text">
+    <string>I/O Devices</string>
+   </property>
+   <property name="toolTip">
+    <string>Configure I/O devices</string>
+   </property>
+   <property name="statusTip">
+    <string>Opens the hardware configuration dialog</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionUserGroup">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/help.svg</normaloff>:/icons/icons/help.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Gqrx user group</string>
+   </property>
+   <property name="toolTip">
+    <string>Discussion group for Gqrx users</string>
+   </property>
+  </action>
+  <action name="actionFullScreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/fullscreen.svg</normaloff>:/icons/icons/fullscreen.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Full screen</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle full screen mode</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+  <action name="actionLoadSettings">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/folder.svg</normaloff>:/icons/icons/folder.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Load settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Load previously stored configuration</string>
+   </property>
+   <property name="statusTip">
+    <string>Load previously stored settings from a file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionSaveSettings">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/floppy.svg</normaloff>:/icons/icons/floppy.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Save settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Save current configuration</string>
+   </property>
+   <property name="statusTip">
+    <string>Save current configuration to a file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionAddBookmark">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/bookmark-new.svg</normaloff>:/icons/icons/bookmark-new.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Add bookmark</string>
+   </property>
+   <property name="toolTip">
+    <string>Bookmark the current frequency and mode (Ctrl+Shift+B)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+B</string>
+   </property>
+  </action>
+  <action name="actionRemoteControl">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/tangeo-network-idle.svg</normaloff>:/icons/icons/tangeo-network-idle.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Remote control</string>
+   </property>
+   <property name="toolTip">
+    <string>Remote control via TCP</string>
+   </property>
+   <property name="statusTip">
+    <string>Activate the TCP interface</string>
+   </property>
+  </action>
+  <action name="actionRemoteConfig">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/settings.svg</normaloff>:/icons/icons/settings.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Remote &amp;control settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Configure remote control settings</string>
+   </property>
+  </action>
+  <action name="actionIqTool">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/signal.svg</normaloff>:/icons/icons/signal.svg</iconset>
+   </property>
+   <property name="text">
+    <string>I/Q recorder</string>
+   </property>
+   <property name="toolTip">
+    <string>Record and play I/Q data</string>
+   </property>
+   <property name="statusTip">
+    <string>Open I/Q recorder dialog</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionNews">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/info.svg</normaloff>:/icons/icons/info.svg</iconset>
+   </property>
+   <property name="text">
+    <string>News</string>
+   </property>
+   <property name="toolTip">
+    <string>Show news about this release</string>
+   </property>
+  </action>
+  <action name="actionRemoteProtocol">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/info.svg</normaloff>:/icons/icons/info.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Remote control</string>
+   </property>
+   <property name="toolTip">
+    <string>Remote control protocol</string>
+   </property>
+  </action>
+  <action name="actionKbdShortcuts">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/info.svg</normaloff>:/icons/icons/info.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Keyboard shortcuts</string>
+   </property>
+   <property name="toolTip">
+    <string>Show help on keyboard shortcuts</string>
+   </property>
+  </action>
+  <action name="actionSaveWaterfall">
+   <property name="text">
+    <string>Save waterfall</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the current waterfall to a graphics file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionDX_Cluster">
+   <property name="text">
+    <string>DX Cluster</string>
+   </property>
+   <property name="toolTip">
+    <string>Open DX Cluster Dialog</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
