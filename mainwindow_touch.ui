@@ -275,7 +275,7 @@
       <x>730</x>
       <y>420</y>
       <width>60</width>
-      <height>50</height>
+      <height>38</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -287,7 +287,7 @@
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>50</height>
+      <height>38</height>
      </size>
     </property>
     <property name="text">
@@ -301,7 +301,7 @@ WX</string>
       <x>660</x>
       <y>420</y>
       <width>60</width>
-      <height>50</height>
+      <height>38</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -313,7 +313,7 @@ WX</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>50</height>
+      <height>38</height>
      </size>
     </property>
     <property name="text">
@@ -327,7 +327,7 @@ FD\PD</string>
       <x>590</x>
       <y>420</y>
       <width>60</width>
-      <height>50</height>
+      <height>38</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -339,7 +339,7 @@ FD\PD</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>50</height>
+      <height>38</height>
      </size>
     </property>
     <property name="text">
@@ -353,7 +353,7 @@ EMS</string>
       <x>520</x>
       <y>420</y>
       <width>60</width>
-      <height>50</height>
+      <height>38</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -365,7 +365,7 @@ EMS</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>50</height>
+      <height>38</height>
      </size>
     </property>
     <property name="text">
@@ -1901,7 +1901,7 @@ DSP</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>270</y>
+      <y>240</y>
       <width>511</width>
       <height>211</height>
      </rect>
@@ -4049,7 +4049,7 @@ This is an offset from the hardware RF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/htm
        </font>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="demodNoOpt">
        <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -7013,10 +7013,10 @@ to react to changes in the carrier frequency however.</string>
    <widget class="QCheckBox" name="rdsCheckbox">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>0</y>
+      <x>410</x>
+      <y>20</y>
       <width>71</width>
-      <height>16</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -7041,6 +7041,12 @@ to react to changes in the carrier frequency however.</string>
     </property>
     <property name="text">
      <string>Enable RDS</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
     </property>
    </widget>
    <widget class="QLabel" name="program_information">
@@ -7210,7 +7216,7 @@ to react to changes in the carrier frequency however.</string>
       <x>380</x>
       <y>140</y>
       <width>131</width>
-      <height>121</height>
+      <height>101</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -7247,7 +7253,7 @@ to react to changes in the carrier frequency however.</string>
       <x>0</x>
       <y>140</y>
       <width>371</width>
-      <height>121</height>
+      <height>101</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -7309,6 +7315,7 @@ to react to changes in the carrier frequency however.</string>
     </property>
    </widget>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <customwidgets>
   <customwidget>
