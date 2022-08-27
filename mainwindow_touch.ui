@@ -703,7 +703,7 @@ DATA</string>
      <string>↑</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_36">
+   <widget class="QPushButton" name="actionsDSP">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -7353,7 +7353,7 @@ to react to changes in the carrier frequency however.</string>
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>pushButton_36</tabstop>
+  <tabstop>actionsDSP</tabstop>
   <tabstop>tabWidget</tabstop>
   <tabstop>pushButton_k_a</tabstop>
   <tabstop>pushButton_k_b</tabstop>
