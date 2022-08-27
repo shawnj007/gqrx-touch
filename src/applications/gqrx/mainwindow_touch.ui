@@ -703,7 +703,7 @@ DATA</string>
      <string>↑</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="actionsDSP">
+   <widget class="QPushButton" name="actionDSP">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -3809,7 +3809,7 @@ This is an offset from the hardware RF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/htm
           <string>&amp;Rec</string>
          </property>
          <property name="icon">
-          <iconset resource="../gqrx/resources/icons.qrc">
+          <iconset resource="../../../resources/icons.qrc">
            <normaloff>:/icons/icons/record.svg</normaloff>:/icons/icons/record.svg</iconset>
          </property>
          <property name="checkable">
@@ -3926,7 +3926,7 @@ This is an offset from the hardware RF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/htm
           <string>&amp;Play</string>
          </property>
          <property name="icon">
-          <iconset resource="../gqrx/resources/icons.qrc">
+          <iconset resource="../../../resources/icons.qrc">
            <normaloff>:/icons/icons/play.svg</normaloff>:/icons/icons/play.svg</iconset>
          </property>
          <property name="checkable">
@@ -7353,7 +7353,7 @@ to react to changes in the carrier frequency however.</string>
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>actionsDSP</tabstop>
+  <tabstop>actionDSP</tabstop>
   <tabstop>tabWidget</tabstop>
   <tabstop>pushButton_k_a</tabstop>
   <tabstop>pushButton_k_b</tabstop>
@@ -7423,7 +7423,7 @@ to react to changes in the carrier frequency however.</string>
   <tabstop>tabWidget_2</tabstop>
  </tabstops>
  <resources>
-  <include location="../gqrx/resources/icons.qrc"/>
+  <include location="../../../resources/icons.qrc"/>
  </resources>
  <connections/>
 </ui>
