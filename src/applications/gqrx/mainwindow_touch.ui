@@ -25,361 +25,6 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>521</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menu_File">
-    <property name="title">
-     <string>&amp;File</string>
-    </property>
-    <widget class="QMenu" name="menu_RecentConfig">
-     <property name="toolTip">
-      <string>Load recently used setting</string>
-     </property>
-     <property name="title">
-      <string>&amp;Recent settings</string>
-     </property>
-    </widget>
-    <addaction name="actionDSP"/>
-    <addaction name="separator"/>
-    <addaction name="actionIoConfig"/>
-    <addaction name="actionLoadSettings"/>
-    <addaction name="actionSaveSettings"/>
-    <addaction name="menu_RecentConfig"/>
-    <addaction name="separator"/>
-    <addaction name="actionSaveWaterfall"/>
-    <addaction name="separator"/>
-    <addaction name="actionQuit"/>
-   </widget>
-   <widget class="QMenu" name="menu_View">
-    <property name="title">
-     <string>&amp;View</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menu_Help">
-    <property name="title">
-     <string>&amp;Help</string>
-    </property>
-    <addaction name="actionUserGroup"/>
-    <addaction name="actionNews"/>
-    <addaction name="separator"/>
-    <addaction name="actionRemoteProtocol"/>
-    <addaction name="actionKbdShortcuts"/>
-    <addaction name="separator"/>
-    <addaction name="actionAbout"/>
-    <addaction name="actionAboutQt"/>
-   </widget>
-   <widget class="QMenu" name="menu_Tools">
-    <property name="title">
-     <string>&amp;Tools</string>
-    </property>
-    <addaction name="actionRemoteControl"/>
-    <addaction name="actionRemoteConfig"/>
-    <addaction name="separator"/>
-    <addaction name="actionAddBookmark"/>
-    <addaction name="separator"/>
-    <addaction name="actionIqTool"/>
-    <addaction name="separator"/>
-    <addaction name="actionAFSK1200"/>
-    <addaction name="separator"/>
-    <addaction name="actionDX_Cluster"/>
-   </widget>
-   <addaction name="menu_File"/>
-   <addaction name="menu_Tools"/>
-   <addaction name="menu_View"/>
-   <addaction name="menu_Help"/>
-  </widget>
-  <action name="actionQuit">
-   <property name="text">
-    <string>Quit</string>
-   </property>
-   <property name="toolTip">
-    <string>Quit application</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+Q</string>
-   </property>
-  </action>
-  <action name="actionAbout">
-   <property name="text">
-    <string>About Gqrx</string>
-   </property>
-   <property name="toolTip">
-    <string>Information about Gqrx</string>
-   </property>
-  </action>
-  <action name="actionAboutQt">
-   <property name="text">
-    <string>About Qt</string>
-   </property>
-   <property name="toolTip">
-    <string>About the Qt toolkit</string>
-   </property>
-  </action>
-  <action name="actionDSP">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/play.svg</normaloff>:/icons/icons/play.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Start DSP</string>
-   </property>
-   <property name="toolTip">
-    <string>Start DSP</string>
-   </property>
-   <property name="statusTip">
-    <string>Start/stop DSP processing</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+D</string>
-   </property>
-  </action>
-  <action name="actionAFSK1200">
-   <property name="text">
-    <string>AFSK1200 Decoder</string>
-   </property>
-   <property name="toolTip">
-    <string>Start AFSK1200 decoder</string>
-   </property>
-  </action>
-  <action name="actionSched">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/clock.svg</normaloff>:/icons/icons/clock.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Scheduler</string>
-   </property>
-   <property name="toolTip">
-    <string>Schedule recordings and other actions</string>
-   </property>
-  </action>
-  <action name="actionIoConfig">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/flash.svg</normaloff>:/icons/icons/flash.svg</iconset>
-   </property>
-   <property name="text">
-    <string>I/O Devices</string>
-   </property>
-   <property name="toolTip">
-    <string>Configure I/O devices</string>
-   </property>
-   <property name="statusTip">
-    <string>Opens the hardware configuration dialog</string>
-   </property>
-   <property name="visible">
-    <bool>true</bool>
-   </property>
-  </action>
-  <action name="actionUserGroup">
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/help.svg</normaloff>:/icons/icons/help.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Gqrx user group</string>
-   </property>
-   <property name="toolTip">
-    <string>Discussion group for Gqrx users</string>
-   </property>
-  </action>
-  <action name="actionFullScreen">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/fullscreen.svg</normaloff>:/icons/icons/fullscreen.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Full screen</string>
-   </property>
-   <property name="toolTip">
-    <string>Toggle full screen mode</string>
-   </property>
-   <property name="shortcut">
-    <string>F11</string>
-   </property>
-  </action>
-  <action name="actionLoadSettings">
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/folder.svg</normaloff>:/icons/icons/folder.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Load settings</string>
-   </property>
-   <property name="toolTip">
-    <string>Load previously stored configuration</string>
-   </property>
-   <property name="statusTip">
-    <string>Load previously stored settings from a file</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+L</string>
-   </property>
-  </action>
-  <action name="actionSaveSettings">
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/floppy.svg</normaloff>:/icons/icons/floppy.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Save settings</string>
-   </property>
-   <property name="toolTip">
-    <string>Save current configuration</string>
-   </property>
-   <property name="statusTip">
-    <string>Save current configuration to a file</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+S</string>
-   </property>
-  </action>
-  <action name="actionAddBookmark">
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/bookmark-new.svg</normaloff>:/icons/icons/bookmark-new.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Add bookmark</string>
-   </property>
-   <property name="toolTip">
-    <string>Bookmark the current frequency and mode (Ctrl+Shift+B)</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+Shift+B</string>
-   </property>
-  </action>
-  <action name="actionRemoteControl">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/tangeo-network-idle.svg</normaloff>:/icons/icons/tangeo-network-idle.svg</iconset>
-   </property>
-   <property name="text">
-    <string>&amp;Remote control</string>
-   </property>
-   <property name="toolTip">
-    <string>Remote control via TCP</string>
-   </property>
-   <property name="statusTip">
-    <string>Activate the TCP interface</string>
-   </property>
-  </action>
-  <action name="actionRemoteConfig">
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/settings.svg</normaloff>:/icons/icons/settings.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Remote &amp;control settings</string>
-   </property>
-   <property name="toolTip">
-    <string>Configure remote control settings</string>
-   </property>
-  </action>
-  <action name="actionIqTool">
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/signal.svg</normaloff>:/icons/icons/signal.svg</iconset>
-   </property>
-   <property name="text">
-    <string>I/Q recorder</string>
-   </property>
-   <property name="toolTip">
-    <string>Record and play I/Q data</string>
-   </property>
-   <property name="statusTip">
-    <string>Open I/Q recorder dialog</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+I</string>
-   </property>
-  </action>
-  <action name="actionNews">
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/info.svg</normaloff>:/icons/icons/info.svg</iconset>
-   </property>
-   <property name="text">
-    <string>News</string>
-   </property>
-   <property name="toolTip">
-    <string>Show news about this release</string>
-   </property>
-  </action>
-  <action name="actionRemoteProtocol">
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/info.svg</normaloff>:/icons/icons/info.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Remote control</string>
-   </property>
-   <property name="toolTip">
-    <string>Remote control protocol</string>
-   </property>
-  </action>
-  <action name="actionKbdShortcuts">
-   <property name="icon">
-    <iconset resource="../../../resources/icons.qrc">
-     <normaloff>:/icons/icons/info.svg</normaloff>:/icons/icons/info.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Keyboard shortcuts</string>
-   </property>
-   <property name="toolTip">
-    <string>Show help on keyboard shortcuts</string>
-   </property>
-  </action>
-  <action name="actionSaveWaterfall">
-   <property name="text">
-    <string>Save waterfall</string>
-   </property>
-   <property name="statusTip">
-    <string>Save the current waterfall to a graphics file</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+W</string>
-   </property>
-  </action>
-  <action name="actionDX_Cluster">
-   <property name="text">
-    <string>DX Cluster</string>
-   </property>
-   <property name="toolTip">
-    <string>Open DX Cluster Dialog</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+C</string>
-   </property>
-  </action>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
@@ -547,7 +192,7 @@
     <property name="geometry">
      <rect>
       <x>730</x>
-      <y>340</y>
+      <y>330</y>
       <width>60</width>
       <height>30</height>
      </rect>
@@ -580,7 +225,7 @@
       <x>730</x>
       <y>300</y>
       <width>60</width>
-      <height>40</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -592,7 +237,7 @@
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>40</height>
+      <height>30</height>
      </size>
     </property>
     <property name="text">
@@ -603,9 +248,9 @@
     <property name="geometry">
      <rect>
       <x>730</x>
-      <y>370</y>
+      <y>360</y>
       <width>60</width>
-      <height>40</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -617,7 +262,7 @@
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>40</height>
+      <height>30</height>
      </size>
     </property>
     <property name="text">
@@ -628,9 +273,9 @@
     <property name="geometry">
      <rect>
       <x>730</x>
-      <y>420</y>
+      <y>400</y>
       <width>60</width>
-      <height>38</height>
+      <height>36</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -642,7 +287,7 @@
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>38</height>
+      <height>36</height>
      </size>
     </property>
     <property name="text">
@@ -654,9 +299,9 @@ WX</string>
     <property name="geometry">
      <rect>
       <x>660</x>
-      <y>420</y>
+      <y>400</y>
       <width>60</width>
-      <height>38</height>
+      <height>36</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -668,7 +313,7 @@ WX</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>38</height>
+      <height>36</height>
      </size>
     </property>
     <property name="text">
@@ -680,9 +325,9 @@ FD\PD</string>
     <property name="geometry">
      <rect>
       <x>590</x>
-      <y>420</y>
+      <y>400</y>
       <width>60</width>
-      <height>38</height>
+      <height>36</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -694,7 +339,7 @@ FD\PD</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>38</height>
+      <height>36</height>
      </size>
     </property>
     <property name="text">
@@ -706,9 +351,9 @@ EMS</string>
     <property name="geometry">
      <rect>
       <x>520</x>
-      <y>420</y>
+      <y>400</y>
       <width>60</width>
-      <height>38</height>
+      <height>36</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -720,7 +365,7 @@ EMS</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>38</height>
+      <height>36</height>
      </size>
     </property>
     <property name="text">
@@ -732,9 +377,9 @@ CUST</string>
     <property name="geometry">
      <rect>
       <x>590</x>
-      <y>360</y>
+      <y>350</y>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -746,7 +391,7 @@ CUST</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </size>
     </property>
     <property name="text">
@@ -758,9 +403,9 @@ RAW</string>
     <property name="geometry">
      <rect>
       <x>520</x>
-      <y>360</y>
+      <y>350</y>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -772,7 +417,7 @@ RAW</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </size>
     </property>
     <property name="text">
@@ -784,9 +429,9 @@ RAW</string>
     <property name="geometry">
      <rect>
       <x>660</x>
-      <y>360</y>
+      <y>350</y>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -798,7 +443,7 @@ RAW</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </size>
     </property>
     <property name="text">
@@ -812,7 +457,7 @@ DATA</string>
       <x>590</x>
       <y>300</y>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -824,7 +469,7 @@ DATA</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </size>
     </property>
     <property name="text">
@@ -838,7 +483,7 @@ DATA</string>
       <x>520</x>
       <y>300</y>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -850,7 +495,7 @@ DATA</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </size>
     </property>
     <property name="text">
@@ -864,7 +509,7 @@ DATA</string>
       <x>660</x>
       <y>300</y>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -876,7 +521,7 @@ DATA</string>
     <property name="minimumSize">
      <size>
       <width>60</width>
-      <height>50</height>
+      <height>40</height>
      </size>
     </property>
     <property name="text">
@@ -2258,7 +1903,7 @@ DSP</string>
       <x>0</x>
       <y>240</y>
       <width>511</width>
-      <height>211</height>
+      <height>221</height>
      </rect>
     </property>
     <property name="font">
@@ -2349,7 +1994,7 @@ Leave it at default unless you know what you are doing.</string>
         <x>0</x>
         <y>-20</y>
         <width>271</width>
-        <height>201</height>
+        <height>191</height>
        </rect>
       </property>
       <property name="font">
@@ -2629,7 +2274,7 @@ Leave it at default unless you know what you are doing.</string>
         <x>0</x>
         <y>10</y>
         <width>511</width>
-        <height>151</height>
+        <height>131</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_7">
@@ -2923,7 +2568,7 @@ Leave it at default unless you know what you are doing.</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>160</y>
+        <y>140</y>
         <width>231</width>
         <height>23</height>
        </rect>
@@ -2945,7 +2590,7 @@ Leave it at default unless you know what you are doing.</string>
       <property name="geometry">
        <rect>
         <x>280</x>
-        <y>160</y>
+        <y>140</y>
         <width>201</width>
         <height>23</height>
        </rect>
@@ -3245,7 +2890,7 @@ Leave it at default unless you know what you are doing.</string>
         <x>0</x>
         <y>0</y>
         <width>511</width>
-        <height>191</height>
+        <height>181</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_5">
@@ -4127,7 +3772,7 @@ This is an offset from the hardware RF frequency.&lt;/p&gt;&lt;/body&gt;&lt;/htm
         <x>0</x>
         <y>0</y>
         <width>511</width>
-        <height>191</height>
+        <height>171</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_10">
@@ -4749,7 +4394,7 @@ to react to changes in the carrier frequency however.</string>
         <x>0</x>
         <y>0</y>
         <width>511</width>
-        <height>191</height>
+        <height>181</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_9">
@@ -4757,7 +4402,7 @@ to react to changes in the carrier frequency however.</string>
         <number>5</number>
        </property>
        <property name="bottomMargin">
-        <number>5</number>
+        <number>8</number>
        </property>
        <property name="spacing">
         <number>2</number>
@@ -6177,7 +5822,7 @@ to react to changes in the carrier frequency however.</string>
         <x>10</x>
         <y>40</y>
         <width>491</width>
-        <height>141</height>
+        <height>131</height>
        </rect>
       </property>
       <property name="font">
@@ -6187,7 +5832,7 @@ to react to changes in the carrier frequency however.</string>
        </font>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab0">
        <attribute name="title">
@@ -6733,11 +6378,11 @@ to react to changes in the carrier frequency however.</string>
         <x>0</x>
         <y>0</y>
         <width>511</width>
-        <height>181</height>
+        <height>171</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_7">
        <attribute name="title">
@@ -6927,7 +6572,7 @@ to react to changes in the carrier frequency however.</string>
         <x>0</x>
         <y>0</y>
         <width>301</width>
-        <height>181</height>
+        <height>171</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -6964,7 +6609,7 @@ to react to changes in the carrier frequency however.</string>
         <x>300</x>
         <y>0</y>
         <width>211</width>
-        <height>181</height>
+        <height>171</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -7440,7 +7085,7 @@ to react to changes in the carrier frequency however.</string>
       <x>0</x>
       <y>70</y>
       <width>511</width>
-      <height>61</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -7469,13 +7114,13 @@ to react to changes in the carrier frequency however.</string>
       <number>0</number>
      </property>
      <property name="topMargin">
-      <number>10</number>
+      <number>5</number>
      </property>
      <property name="rightMargin">
       <number>0</number>
      </property>
      <property name="bottomMargin">
-      <number>10</number>
+      <number>5</number>
      </property>
      <item>
       <spacer name="horizontalSpacer_3">
@@ -7501,7 +7146,7 @@ to react to changes in the carrier frequency however.</string>
        <property name="minimumSize">
         <size>
          <width>280</width>
-         <height>40</height>
+         <height>30</height>
         </size>
        </property>
        <property name="toolTip">
@@ -7539,7 +7184,7 @@ to react to changes in the carrier frequency however.</string>
        <property name="minimumSize">
         <size>
          <width>150</width>
-         <height>40</height>
+         <height>30</height>
         </size>
        </property>
        <property name="frameShape">
@@ -7569,9 +7214,9 @@ to react to changes in the carrier frequency however.</string>
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>140</y>
+      <y>110</y>
       <width>131</width>
-      <height>101</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -7606,9 +7251,9 @@ to react to changes in the carrier frequency however.</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>140</y>
+      <y>110</y>
       <width>371</width>
-      <height>101</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -7670,7 +7315,362 @@ to react to changes in the carrier frequency however.</string>
     </property>
    </widget>
   </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menu_RecentConfig">
+     <property name="toolTip">
+      <string>Load recently used setting</string>
+     </property>
+     <property name="title">
+      <string>&amp;Recent settings</string>
+     </property>
+    </widget>
+    <addaction name="actionDSP"/>
+    <addaction name="separator"/>
+    <addaction name="actionIoConfig"/>
+    <addaction name="actionLoadSettings"/>
+    <addaction name="actionSaveSettings"/>
+    <addaction name="menu_RecentConfig"/>
+    <addaction name="separator"/>
+    <addaction name="actionSaveWaterfall"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionUserGroup"/>
+    <addaction name="actionNews"/>
+    <addaction name="separator"/>
+    <addaction name="actionRemoteProtocol"/>
+    <addaction name="actionKbdShortcuts"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+    <addaction name="actionAboutQt"/>
+   </widget>
+   <widget class="QMenu" name="menu_Tools">
+    <property name="title">
+     <string>&amp;Tools</string>
+    </property>
+    <addaction name="actionRemoteControl"/>
+    <addaction name="actionRemoteConfig"/>
+    <addaction name="separator"/>
+    <addaction name="actionAddBookmark"/>
+    <addaction name="separator"/>
+    <addaction name="actionIqTool"/>
+    <addaction name="separator"/>
+    <addaction name="actionAFSK1200"/>
+    <addaction name="separator"/>
+    <addaction name="actionDX_Cluster"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Tools"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_Help"/>
+  </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="toolTip">
+    <string>Quit application</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About Gqrx</string>
+   </property>
+   <property name="toolTip">
+    <string>Information about Gqrx</string>
+   </property>
+  </action>
+  <action name="actionAboutQt">
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+   <property name="toolTip">
+    <string>About the Qt toolkit</string>
+   </property>
+  </action>
+  <action name="actionDSP">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/play.svg</normaloff>:/icons/icons/play.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Start DSP</string>
+   </property>
+   <property name="toolTip">
+    <string>Start DSP</string>
+   </property>
+   <property name="statusTip">
+    <string>Start/stop DSP processing</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionAFSK1200">
+   <property name="text">
+    <string>AFSK1200 Decoder</string>
+   </property>
+   <property name="toolTip">
+    <string>Start AFSK1200 decoder</string>
+   </property>
+  </action>
+  <action name="actionSched">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/clock.svg</normaloff>:/icons/icons/clock.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Scheduler</string>
+   </property>
+   <property name="toolTip">
+    <string>Schedule recordings and other actions</string>
+   </property>
+  </action>
+  <action name="actionIoConfig">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/flash.svg</normaloff>:/icons/icons/flash.svg</iconset>
+   </property>
+   <property name="text">
+    <string>I/O Devices</string>
+   </property>
+   <property name="toolTip">
+    <string>Configure I/O devices</string>
+   </property>
+   <property name="statusTip">
+    <string>Opens the hardware configuration dialog</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionUserGroup">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/help.svg</normaloff>:/icons/icons/help.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Gqrx user group</string>
+   </property>
+   <property name="toolTip">
+    <string>Discussion group for Gqrx users</string>
+   </property>
+  </action>
+  <action name="actionFullScreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/fullscreen.svg</normaloff>:/icons/icons/fullscreen.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Full screen</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle full screen mode</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+  <action name="actionLoadSettings">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/folder.svg</normaloff>:/icons/icons/folder.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Load settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Load previously stored configuration</string>
+   </property>
+   <property name="statusTip">
+    <string>Load previously stored settings from a file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionSaveSettings">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/floppy.svg</normaloff>:/icons/icons/floppy.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Save settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Save current configuration</string>
+   </property>
+   <property name="statusTip">
+    <string>Save current configuration to a file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionAddBookmark">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/bookmark-new.svg</normaloff>:/icons/icons/bookmark-new.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Add bookmark</string>
+   </property>
+   <property name="toolTip">
+    <string>Bookmark the current frequency and mode (Ctrl+Shift+B)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+B</string>
+   </property>
+  </action>
+  <action name="actionRemoteControl">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/tangeo-network-idle.svg</normaloff>:/icons/icons/tangeo-network-idle.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Remote control</string>
+   </property>
+   <property name="toolTip">
+    <string>Remote control via TCP</string>
+   </property>
+   <property name="statusTip">
+    <string>Activate the TCP interface</string>
+   </property>
+  </action>
+  <action name="actionRemoteConfig">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/settings.svg</normaloff>:/icons/icons/settings.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Remote &amp;control settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Configure remote control settings</string>
+   </property>
+  </action>
+  <action name="actionIqTool">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/signal.svg</normaloff>:/icons/icons/signal.svg</iconset>
+   </property>
+   <property name="text">
+    <string>I/Q recorder</string>
+   </property>
+   <property name="toolTip">
+    <string>Record and play I/Q data</string>
+   </property>
+   <property name="statusTip">
+    <string>Open I/Q recorder dialog</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionNews">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/info.svg</normaloff>:/icons/icons/info.svg</iconset>
+   </property>
+   <property name="text">
+    <string>News</string>
+   </property>
+   <property name="toolTip">
+    <string>Show news about this release</string>
+   </property>
+  </action>
+  <action name="actionRemoteProtocol">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/info.svg</normaloff>:/icons/icons/info.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Remote control</string>
+   </property>
+   <property name="toolTip">
+    <string>Remote control protocol</string>
+   </property>
+  </action>
+  <action name="actionKbdShortcuts">
+   <property name="icon">
+    <iconset resource="../../../resources/icons.qrc">
+     <normaloff>:/icons/icons/info.svg</normaloff>:/icons/icons/info.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Keyboard shortcuts</string>
+   </property>
+   <property name="toolTip">
+    <string>Show help on keyboard shortcuts</string>
+   </property>
+  </action>
+  <action name="actionSaveWaterfall">
+   <property name="text">
+    <string>Save waterfall</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the current waterfall to a graphics file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionDX_Cluster">
+   <property name="text">
+    <string>DX Cluster</string>
+   </property>
+   <property name="toolTip">
+    <string>Open DX Cluster Dialog</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
