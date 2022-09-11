@@ -47,7 +47,7 @@
 #include <QVBoxLayout>
 #include <QSvgWidget>
 #include "qtgui/ioconfig.h"
-#include "mainwindow.h"
+#include "mainwindow_touch.h"
 #include "qtgui/dxc_options.h"
 #include "qtgui/dxc_spots.h"
 
@@ -140,6 +140,8 @@ MainWindow::MainWindow(const QString& cfgfile, bool edit_conf, QWidget *parent) 
     Bookmarks::Get().setConfigDir(m_cfg_dir);
     BandPlan::Get().load();
     uiDockBookmarks = new DockBookmarks(this);
+    
+    uiDockTouchControls = new DockTouchControls(this);
 
     // setup some toggle view shortcuts
     //uiDockInputCtl->toggleViewAction()->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_J));
@@ -177,6 +179,7 @@ MainWindow::MainWindow(const QString& cfgfile, bool edit_conf, QWidget *parent) 
 
     addDockWidget(Qt::LeftDockWidgetArea, uiDockRDS);
 
+    addDockWidget(Qt::RightDockWidgetArea, uiDockTouchControls);
 
     /* hide docks that we don't want to show initially */
     //uiDockBookmarks->hide();

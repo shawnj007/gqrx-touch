@@ -39,6 +39,8 @@
 #include "qtgui/dockfft.h"
 #include "qtgui/dockbookmarks.h"
 #include "qtgui/dockrds.h"
+#include "qtgui/docktouchcontrols.h"
+
 #include "qtgui/afsk1200win.h"
 #include "qtgui/iq_tool.h"
 #include "qtgui/dxc_options.h"
@@ -96,6 +98,8 @@ private:
     DockFft        *uiDockFft;
     DockBookmarks  *uiDockBookmarks;
     DockRDS        *uiDockRDS;
+
+    DockTouchControls  *uiDockTouchControls;
 
     CIqTool        *iq_tool;
     DXCOptions     *dxc_options;

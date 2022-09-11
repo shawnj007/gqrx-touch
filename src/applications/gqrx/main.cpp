@@ -37,7 +37,7 @@
 #include <pulse/simple.h>
 #endif
 
-#include "mainwindow.h"
+#include "mainwindow_touch.h"
 #include "gqrx.h"
 
 #include <iostream>
