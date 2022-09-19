@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>520</width>
-    <height>220</height>
+    <width>400</width>
+    <height>120</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,8 +18,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>520</width>
-    <height>220</height>
+    <width>400</width>
+    <height>120</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -78,7 +78,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="text">
@@ -100,7 +100,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -125,7 +125,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -150,7 +150,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -178,7 +178,7 @@
       <property name="minimumSize">
        <size>
         <width>50</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -206,7 +206,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -228,7 +228,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -259,7 +259,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -290,7 +290,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -318,7 +318,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -361,7 +361,7 @@
       <property name="minimumSize">
        <size>
         <width>50</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="maximumSize">
@@ -395,7 +395,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -420,7 +420,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -448,7 +448,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="text">
@@ -470,7 +470,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -495,7 +495,7 @@
       <property name="minimumSize">
        <size>
         <width>50</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="maximumSize">
@@ -526,7 +526,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -585,7 +585,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -616,7 +616,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -710,7 +710,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -738,7 +738,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -763,7 +763,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -791,7 +791,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -822,7 +822,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -923,7 +923,7 @@
       <property name="minimumSize">
        <size>
         <width>50</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="maximumSize">
@@ -951,7 +951,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="text">
@@ -973,7 +973,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="text">
@@ -995,7 +995,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="text">
@@ -1017,7 +1017,7 @@
       <property name="minimumSize">
        <size>
         <width>50</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="maximumSize">
@@ -1045,7 +1045,7 @@
       <property name="minimumSize">
        <size>
         <width>50</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="maximumSize">
@@ -1076,7 +1076,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="text">
@@ -1098,7 +1098,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -1117,7 +1117,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -1151,7 +1151,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
@@ -1228,7 +1228,7 @@
       <property name="minimumSize">
        <size>
         <width>50</width>
-        <height>20</height>
+        <height>10</height>
        </size>
       </property>
       <property name="maximumSize">
@@ -1256,7 +1256,7 @@
       <property name="minimumSize">
        <size>
         <width>50</width>
-        <height>32</height>
+        <height>10</height>
        </size>
       </property>
       <property name="toolTip">
