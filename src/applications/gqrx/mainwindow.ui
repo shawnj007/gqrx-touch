@@ -195,7 +195,7 @@
      <x>0</x>
      <y>0</y>
      <width>521</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -259,6 +259,11 @@
    <addaction name="menu_View"/>
    <addaction name="menu_Help"/>
   </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+  </widget>
   <widget class="QToolBar" name="mainToolBar">
    <property name="windowTitle">
     <string>Main toolbar</string>
@@ -284,11 +289,6 @@
    <addaction name="separator"/>
    <addaction name="actionFullScreen"/>
    <addaction name="separator"/>
-  </widget>
-  <widget class="QStatusBar" name="statusBar">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
   </widget>
   <action name="actionQuit">
    <property name="text">

@@ -35,7 +35,7 @@ DXCOptions::DXCOptions(QWidget *parent) :
 
     /* select font for text viewer */
     auto fixedFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);
-    fixedFont.setPointSize(10);
+    //fixedFont.setPointSize(10);
     ui->plainTextEdit_DXCMonitor->setFont(fixedFont);
 
     m_socket = new QTcpSocket(this);

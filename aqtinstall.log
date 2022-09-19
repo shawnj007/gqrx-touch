@@ -1,0 +1,36 @@
+2022-09-11 13:55:09,091 - aqt.helper - DEBUG - helper 139955170588480 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/Updates.xml.sha256
+2022-09-11 13:55:14,325 - aqt.main - INFO - installer 140634495686464 aqtinstall(aqt) v2.2.3 on Python 3.8.10 [CPython GCC 9.4.0]
+2022-09-11 13:55:14,326 - aqt.helper - DEBUG - helper 140634495686464 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/Updates.xml.sha256
+2022-09-11 13:55:16,417 - aqt.helper - DEBUG - helper 139883583526720 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtbase-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z.sha256
+2022-09-11 13:55:16,469 - aqt.helper - DEBUG - helper 139830923028288 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtsvg-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z.sha256
+2022-09-11 13:55:16,560 - aqt.helper - DEBUG - helper 139833534330688 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtdeclarative-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z.sha256
+2022-09-11 13:55:16,575 - aqt.helper - DEBUG - helper 140002708363072 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qttools-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z.sha256
+2022-09-11 13:55:17,276 - aqt.helper - INFO - helper 139883583526720 Downloading qtbase...
+2022-09-11 13:55:17,276 - aqt.helper - INFO - helper 139830923028288 Downloading qtsvg...
+2022-09-11 13:55:17,277 - aqt.installer - DEBUG - installer 139883583526720 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtbase-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:17,278 - aqt.installer - DEBUG - installer 139830923028288 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtsvg-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:17,485 - aqt.helper - INFO - helper 140002708363072 Downloading qttools...
+2022-09-11 13:55:17,485 - aqt.helper - INFO - helper 139833534330688 Downloading qtdeclarative...
+2022-09-11 13:55:17,489 - aqt.installer - DEBUG - installer 140002708363072 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qttools-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:17,490 - aqt.installer - DEBUG - installer 139833534330688 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtdeclarative-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:18,095 - aqt.helper - DEBUG - helper 139830923028288 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtsvg-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:18,096 - aqt.helper - INFO - helper 139830923028288 Redirected: qt.mirror.constant.com
+2022-09-11 13:55:18,096 - aqt.helper - DEBUG - helper 139883583526720 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtbase-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:18,097 - aqt.helper - INFO - helper 139883583526720 Redirected: qt.mirror.constant.com
+2022-09-11 13:55:18,246 - aqt.helper - DEBUG - helper 139833534330688 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtdeclarative-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:18,249 - aqt.helper - INFO - helper 139833534330688 Redirected: qt.mirror.constant.com
+2022-09-11 13:55:18,249 - aqt.helper - DEBUG - helper 140002708363072 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qttools-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:18,254 - aqt.helper - INFO - helper 140002708363072 Redirected: qt.mirror.constant.com
+2022-09-11 13:55:18,859 - aqt.installer - INFO - installer 139830923028288 Finished installation of qtsvg-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z in 2.39308248
+2022-09-11 13:55:18,892 - aqt.helper - DEBUG - helper 139830923028288 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qttranslations-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z.sha256
+2022-09-11 13:55:19,744 - aqt.helper - INFO - helper 139830923028288 Downloading qttranslations...
+2022-09-11 13:55:19,746 - aqt.installer - DEBUG - installer 139830923028288 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qttranslations-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:20,609 - aqt.helper - DEBUG - helper 139830923028288 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qttranslations-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:20,616 - aqt.helper - INFO - helper 139830923028288 Redirected: qt.mirror.constant.com
+2022-09-11 13:55:25,847 - aqt.installer - INFO - installer 139830923028288 Finished installation of qttranslations-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z in 6.96831312
+2022-09-11 13:55:25,864 - aqt.helper - DEBUG - helper 139830923028288 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtwayland-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z.sha256
+2022-09-11 13:55:27,622 - aqt.helper - INFO - helper 139830923028288 Downloading qtwayland...
+2022-09-11 13:55:27,623 - aqt.installer - DEBUG - installer 139830923028288 Download URL: https://download.qt.io/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtwayland-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:29,238 - aqt.helper - DEBUG - helper 139830923028288 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/linux_x64/desktop/qt6_620/qt.qt6.620.gcc_64/6.2.0-0-202109261527qtwayland-Linux-RHEL_8_2-GCC-Linux-RHEL_8_2-X86_64.7z
+2022-09-11 13:55:29,249 - aqt.helper - INFO - helper 139830923028288 Redirected: qt.mirror.constant.com
+2022-09-11 13:55:42,476 - aqt.installer - WARNING - installer 140634495686464 Caught KeyboardInterrupt, terminating installer workers

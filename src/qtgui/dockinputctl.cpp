@@ -385,15 +385,15 @@ void DockInputCtl::setGainStages(gain_list_t &gain_list)
         gain  = (int)(10.0 * gain_list[i].value);
 
         label = new QLabel(QString("%1 ").arg(gain_list[i].name.c_str()), this);
-        label->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
+        //label->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         value = new QLabel(QString(" %1 dB").arg(gain_list[i].value, 0, 'f', 1), this);
-        value->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
+        //value->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         slider = new QSlider(Qt::Horizontal, this);
         slider->setProperty("idx", i);
         slider->setProperty("name", QString(gain_list[i].name.c_str()));
-        slider->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Minimum);
+        //slider->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Minimum);
         slider->setRange(start, stop);
         slider->setSingleStep(step);
         slider->setValue(gain);

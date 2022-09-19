@@ -60,7 +60,8 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 #endif
     QLoggingCategory::setFilterRules("*.debug=false");
-
+    
+    
     QString plugin_path = QDir::cleanPath(QCoreApplication::applicationDirPath() + "/../soapy-modules");
     QFileInfo plugin_path_info(plugin_path);
     if (plugin_path_info.isDir())

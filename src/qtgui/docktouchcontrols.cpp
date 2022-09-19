@@ -20,11 +20,13 @@
  * the Free Software Foundation, Inc., 51 Franklin Street,
  * Boston, MA 02110-1301, USA.
  */
+ 
 //#include <cmath>
 //#include <QDebug>
 //#include <QDateTime>
 //#include <QShortcut>
 //#include <QDir>
+
 #include "docktouchcontrols.h"
 #include "ui_docktouchcontrols.h"
 
@@ -39,5 +41,3 @@ DockTouchControls::~DockTouchControls()
 {
     delete ui;
 }
-
-

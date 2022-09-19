@@ -155,10 +155,12 @@ MainWindow::MainWindow(const QString& cfgfile, bool edit_conf, QWidget *parent) 
     auto *freq_shortcut = new QShortcut(QKeySequence(Qt::Key_F), this);
     QObject::connect(freq_shortcut, &QShortcut::activated, this, &MainWindow::frequencyFocusShortcut);
 
-    setCorner(Qt::TopLeftCorner, Qt::LeftDockWidgetArea);
+    setCorner(Qt::TopLeftCorner, Qt::TopDockWidgetArea);
+
     setCorner(Qt::TopRightCorner, Qt::RightDockWidgetArea);
-    setCorner(Qt::BottomLeftCorner, Qt::BottomDockWidgetArea);
     setCorner(Qt::BottomRightCorner, Qt::RightDockWidgetArea);
+
+    setCorner(Qt::BottomLeftCorner, Qt::BottomDockWidgetArea);
 
     /* Add dock widgets to main window. This should be done even for
        dock widgets that are going to be hidden, otherwise they will
@@ -177,9 +179,23 @@ MainWindow::MainWindow(const QString& cfgfile, bool edit_conf, QWidget *parent) 
     tabifyDockWidget(uiDockAudio, uiDockBookmarks);
     uiDockRxOpt->raise();
 
-    addDockWidget(Qt::LeftDockWidgetArea, uiDockRDS);
+    addDockWidget(Qt::TopDockWidgetArea, uiDockRDS);
 
     addDockWidget(Qt::RightDockWidgetArea, uiDockTouchControls);
+    
+    uiDockInputCtl->setTitleBarWidget(new QWidget(uiDockInputCtl));
+    uiDockRxOpt->setTitleBarWidget(new QWidget(uiDockRxOpt));
+    uiDockFft->setTitleBarWidget(new QWidget(uiDockFft));
+    uiDockAudio->setTitleBarWidget(new QWidget(uiDockAudio));
+    uiDockBookmarks->setTitleBarWidget(new QWidget(uiDockBookmarks));
+    uiDockRxOpt->setTitleBarWidget(new QWidget(uiDockRxOpt));
+    uiDockFft->setTitleBarWidget(new QWidget(uiDockFft));
+    uiDockAudio->setTitleBarWidget(new QWidget(uiDockAudio));
+    uiDockBookmarks->setTitleBarWidget(new QWidget(uiDockBookmarks));
+    
+    uiDockRDS->setTitleBarWidget(new QWidget(uiDockRDS));
+
+    uiDockTouchControls->setTitleBarWidget(new QWidget(uiDockTouchControls));
 
     /* hide docks that we don't want to show initially */
     //uiDockBookmarks->hide();
@@ -398,7 +414,7 @@ MainWindow::~MainWindow()
     delete ui;
     delete uiDockRxOpt;
     delete uiDockAudio;
-    delete uiDockBookmarks;
+    //delete uiDockBookmarks;
     delete uiDockFft;
     delete uiDockInputCtl;
     delete uiDockRDS;
@@ -864,7 +880,7 @@ void MainWindow::setNewFrequency(qint64 rx_freq)
     ui->plotter->setCenterFreq(center_freq);
     uiDockRxOpt->setHwFreq(d_hw_freq);
     ui->freqCtrl->setFrequency(rx_freq);
-    uiDockBookmarks->setNewFrequency(rx_freq);
+    //uiDockBookmarks->setNewFrequency(rx_freq);
 }
 
 /**
@@ -2420,8 +2436,8 @@ void MainWindow::on_actionAddBookmark_triggered()
             info.tags.append(&Bookmarks::Get().findOrAddTag(tags[i]));
 
         Bookmarks::Get().add(info);
-        uiDockBookmarks->updateTags();
-        uiDockBookmarks->updateBookmarks();
+        //uiDockBookmarks->updateTags();
+        //uiDockBookmarks->updateBookmarks();
         ui->plotter->updateOverlay();
     }
 }
