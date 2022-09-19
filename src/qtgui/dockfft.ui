@@ -111,7 +111,7 @@
             <number>0</number>
            </property>
            <item row="0" column="2">
-            <widget class="QPushButton" name="peakHoldButton_2">
+            <widget class="QPushButton" name="peakHoldButton">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -142,7 +142,7 @@
             </widget>
            </item>
            <item row="2" column="1">
-            <widget class="ctkRangeSlider" name="wfRangeSlider_2">
+            <widget class="ctkRangeSlider" name="wfRangeSlider">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -173,7 +173,7 @@
             </widget>
            </item>
            <item row="2" column="0">
-            <widget class="QLabel" name="wfRangeLabel_2">
+            <widget class="QLabel" name="wfRangeLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -201,7 +201,7 @@
             </widget>
            </item>
            <item row="1" column="2" rowspan="2">
-            <widget class="QPushButton" name="lockButton_2">
+            <widget class="QPushButton" name="lockButton">
              <property name="enabled">
               <bool>true</bool>
              </property>
@@ -232,7 +232,7 @@
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QPushButton" name="peakDetectionButton_2">
+            <widget class="QPushButton" name="peakDetectionButton">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -263,7 +263,7 @@
             </widget>
            </item>
            <item row="0" column="3">
-            <widget class="QPushButton" name="centerButton_2">
+            <widget class="QPushButton" name="centerButton">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -291,7 +291,7 @@
             </widget>
            </item>
            <item row="0" column="0">
-            <widget class="QLabel" name="peakLabel_2">
+            <widget class="QLabel" name="peakLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -313,7 +313,7 @@
             </widget>
            </item>
            <item row="1" column="1">
-            <widget class="ctkRangeSlider" name="pandRangeSlider_2">
+            <widget class="ctkRangeSlider" name="pandRangeSlider">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -344,7 +344,7 @@
             </widget>
            </item>
            <item row="2" column="3">
-            <widget class="QPushButton" name="resetButton_2">
+            <widget class="QPushButton" name="resetButton">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -372,7 +372,7 @@
             </widget>
            </item>
            <item row="1" column="3">
-            <widget class="QPushButton" name="demodButton_2">
+            <widget class="QPushButton" name="demodButton">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -400,7 +400,7 @@
             </widget>
            </item>
            <item row="1" column="0">
-            <widget class="QLabel" name="pandRangeLabel_2">
+            <widget class="QLabel" name="pandRangeLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -471,7 +471,7 @@
             <number>0</number>
            </property>
            <item row="1" column="4">
-            <widget class="QCheckBox" name="bandPlanCheckbox_2">
+            <widget class="QCheckBox" name="bandPlanCheckbox">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -496,7 +496,7 @@
             </widget>
            </item>
            <item row="1" column="1" colspan="3">
-            <widget class="QComboBox" name="cmapComboBox_2">
+            <widget class="QComboBox" name="cmapComboBox">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -515,7 +515,7 @@
             </widget>
            </item>
            <item row="0" column="0">
-            <widget class="QLabel" name="colorLabel_2">
+            <widget class="QLabel" name="colorLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -540,7 +540,7 @@
             </widget>
            </item>
            <item row="0" column="2" colspan="2">
-            <widget class="QPushButton" name="fillButton_2">
+            <widget class="QPushButton" name="fillButton">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -596,7 +596,7 @@
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QtColorPicker" name="colorPicker_2">
+            <widget class="QtColorPicker" name="colorPicker">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -649,7 +649,7 @@
             </widget>
            </item>
            <item row="2" column="1" colspan="3">
-            <widget class="QComboBox" name="fftWinComboBox_2">
+            <widget class="QComboBox" name="fftWinComboBox">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -708,7 +708,7 @@
             </widget>
            </item>
            <item row="2" column="4">
-            <widget class="QLabel" name="wfLabel_2">
+            <widget class="QLabel" name="wfLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -761,7 +761,7 @@
             <number>0</number>
            </property>
            <item row="0" column="0">
-            <widget class="QLabel" name="fftSizeLabel_2">
+            <widget class="QLabel" name="fftSizeLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -783,7 +783,7 @@
             </widget>
            </item>
            <item row="0" column="1">
-            <widget class="QComboBox" name="fftSizeComboBox_2">
+            <widget class="QComboBox" name="fftSizeComboBox">
              <property name="enabled">
               <bool>true</bool>
              </property>
@@ -887,7 +887,7 @@
             </widget>
            </item>
            <item row="0" column="2">
-            <widget class="QLabel" name="fftRbwLabel_2">
+            <widget class="QLabel" name="fftRbwLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -909,7 +909,7 @@
             </widget>
            </item>
            <item row="0" column="3">
-            <widget class="QLabel" name="fftAvgLabel_2">
+            <widget class="QLabel" name="fftAvgLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -934,7 +934,7 @@
             </widget>
            </item>
            <item row="0" column="4">
-            <widget class="QSlider" name="fftAvgSlider_2">
+            <widget class="QSlider" name="fftAvgSlider">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -968,7 +968,7 @@
             </widget>
            </item>
            <item row="1" column="0">
-            <widget class="QLabel" name="fftRateLabel_2">
+            <widget class="QLabel" name="fftRateLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -990,7 +990,7 @@
             </widget>
            </item>
            <item row="1" column="1">
-            <widget class="QComboBox" name="fftRateComboBox_2">
+            <widget class="QComboBox" name="fftRateComboBox">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -1067,7 +1067,7 @@
             </widget>
            </item>
            <item row="1" column="2">
-            <widget class="QLabel" name="fftOvrLabel_2">
+            <widget class="QLabel" name="fftOvrLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -1092,7 +1092,7 @@
             </widget>
            </item>
            <item row="1" column="3">
-            <widget class="QLabel" name="pandLabel_2">
+            <widget class="QLabel" name="pandLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -1114,7 +1114,7 @@
             </widget>
            </item>
            <item row="1" column="4">
-            <widget class="QSlider" name="fftSplitSlider_2">
+            <widget class="QSlider" name="fftSplitSlider">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -1173,7 +1173,7 @@
             </widget>
            </item>
            <item row="2" column="1">
-            <widget class="QComboBox" name="wfSpanComboBox_2">
+            <widget class="QComboBox" name="wfSpanComboBox">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -1267,7 +1267,7 @@
             </widget>
            </item>
            <item row="2" column="2">
-            <widget class="QLabel" name="wfResLabel_2">
+            <widget class="QLabel" name="wfResLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -1292,7 +1292,7 @@
             </widget>
            </item>
            <item row="2" column="3">
-            <widget class="QLabel" name="zoomLAbel_2">
+            <widget class="QLabel" name="zoomLAbel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -1320,7 +1320,7 @@
             </widget>
            </item>
            <item row="2" column="4">
-            <widget class="QSlider" name="fftZoomSlider_2">
+            <widget class="QSlider" name="fftZoomSlider">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
@@ -1363,7 +1363,7 @@
             </widget>
            </item>
            <item row="2" column="5">
-            <widget class="QLabel" name="zoomLevelLabel_2">
+            <widget class="QLabel" name="zoomLevelLabel">
              <property name="sizePolicy">
               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
