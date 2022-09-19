@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>120</height>
+    <height>90</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,7 +19,7 @@
   <property name="minimumSize">
    <size>
     <width>400</width>
-    <height>120</height>
+    <height>90</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -69,7 +69,7 @@
       <property name="spacing">
        <number>0</number>
       </property>
-      <item row="1" column="0">
+      <item row="2" column="0">
        <widget class="QDoubleSpinBox" name="lnbSpinBox">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
@@ -106,7 +106,38 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lnbLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>LNB LO</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="indent">
+         <number>-1</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
        <widget class="QDoubleSpinBox" name="freqCorrSpinBox">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
@@ -134,6 +165,53 @@
         </property>
         <property name="value">
          <double>0.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="freqCorrLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Freq. correction</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QComboBox" name="antSelector">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Select active antenna connector</string>
         </property>
        </widget>
       </item>
@@ -168,6 +246,28 @@
         </property>
        </widget>
       </item>
+      <item row="3" column="0">
+       <widget class="QCheckBox" name="freqCtrlResetButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset subordinate digits in main frequency control widget&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>Reset FQ digits</string>
+        </property>
+       </widget>
+      </item>
       <item row="3" column="1">
        <widget class="QCheckBox" name="agcButton">
         <property name="sizePolicy">
@@ -190,8 +290,8 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QLabel" name="freqCorrLabel">
+      <item row="2" column="3">
+       <widget class="QCheckBox" name="iqBalanceButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -204,21 +304,15 @@
           <height>0</height>
          </size>
         </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>20</height>
-         </size>
+        <property name="toolTip">
+         <string>Enable automatic I/Q balance (requires gr-iqbal component)</string>
         </property>
         <property name="text">
-         <string>Freq. correction</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
+         <string>IQ balance</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="0">
+      <item row="2" column="4">
        <widget class="QCheckBox" name="iqSwapButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
@@ -243,8 +337,8 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="lnbLabel">
+      <item row="0" column="3" colspan="2">
+       <widget class="QCheckBox" name="invertScrollingButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -257,87 +351,12 @@
           <height>0</height>
          </size>
         </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>20</height>
-         </size>
-        </property>
         <property name="text">
-         <string>LNB LO</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="indent">
-         <number>-1</number>
+         <string>Invert scroll wheel</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
-       <widget class="QCheckBox" name="iqBalanceButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>Enable automatic I/Q balance (requires gr-iqbal component)</string>
-        </property>
-        <property name="text">
-         <string>IQ balance</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QCheckBox" name="dcCancelButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>Enable automatic DC removal</string>
-        </property>
-        <property name="text">
-         <string>DC remove</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QComboBox" name="antSelector">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>Select active antenna connector</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
+      <item row="3" column="3">
        <widget class="QCheckBox" name="ignoreButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
@@ -359,27 +378,8 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="2">
-       <widget class="QCheckBox" name="invertScrollingButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Invert scroll wheel</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0" colspan="2">
-       <widget class="QCheckBox" name="freqCtrlResetButton">
+      <item row="3" column="4">
+       <widget class="QCheckBox" name="dcCancelButton">
         <property name="sizePolicy">
          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -393,10 +393,10 @@
          </size>
         </property>
         <property name="toolTip">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset subordinate digits in main frequency control widget&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>Enable automatic DC removal</string>
         </property>
         <property name="text">
-         <string>Reset frequency controller digits</string>
+         <string>DC remove</string>
         </property>
        </widget>
       </item>
