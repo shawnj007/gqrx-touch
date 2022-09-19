@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>475</width>
+    <width>443</width>
     <height>120</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>475</width>
+    <width>443</width>
     <height>120</height>
    </size>
   </property>
@@ -70,11 +70,11 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
-        <string>Page 1</string>
+        <string>Peak\Range</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_5">
         <property name="spacing">
@@ -94,7 +94,7 @@
         </property>
         <item>
          <widget class="QFrame" name="frame">
-          <layout class="QGridLayout" name="gridLayout">
+          <layout class="QGridLayout" name="gridLayout" columnstretch="0,1,1,1">
            <property name="leftMargin">
             <number>0</number>
            </property>
@@ -434,7 +434,7 @@
       </widget>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
-        <string>Page 2</string>
+        <string>Colors\Bands</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_6">
         <property name="spacing">
@@ -454,7 +454,7 @@
         </property>
         <item>
          <widget class="QFrame" name="frame">
-          <layout class="QGridLayout" name="gridLayout_4">
+          <layout class="QGridLayout" name="gridLayout_4" columnstretch="0,1,1,1,0">
            <property name="leftMargin">
             <number>0</number>
            </property>
@@ -470,31 +470,6 @@
            <property name="spacing">
             <number>0</number>
            </property>
-           <item row="1" column="4">
-            <widget class="QCheckBox" name="bandPlanCheckbox">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>10</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>Enable Band Plan on bottom of spectrum</string>
-             </property>
-             <property name="layoutDirection">
-              <enum>Qt::LeftToRight</enum>
-             </property>
-             <property name="text">
-              <string>Enable Band Plan</string>
-             </property>
-            </widget>
-           </item>
            <item row="1" column="1" colspan="3">
             <widget class="QComboBox" name="cmapComboBox">
              <property name="sizePolicy">
@@ -729,6 +704,31 @@
              </property>
             </widget>
            </item>
+           <item row="0" column="4">
+            <widget class="QCheckBox" name="bandPlanCheckbox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>10</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Enable Band Plan on bottom of spectrum</string>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="text">
+              <string>Band Plan</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </item>
@@ -736,7 +736,7 @@
       </widget>
       <widget class="QWidget" name="tab_5">
        <attribute name="title">
-        <string>Page 3</string>
+        <string>View</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_7">
         <property name="spacing">
