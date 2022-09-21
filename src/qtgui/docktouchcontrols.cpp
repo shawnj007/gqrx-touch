@@ -27,6 +27,8 @@
 //#include <QShortcut>
 //#include <QDir>
 
+#include <QKeyEvent>
+
 #include "docktouchcontrols.h"
 #include "ui_docktouchcontrols.h"
 
@@ -40,4 +42,21 @@ DockTouchControls::DockTouchControls(QWidget *parent) :
 DockTouchControls::~DockTouchControls()
 {
     delete ui;
+}
+
+void DockTouchControls::on_pushButton_d_1_clicked()
+{
+    printf("Key 1\n");
+    
+    if (QApplication::focusWidget() == nullptr) {
+        printf("Failed to find focus\n");
+    } else {
+        printf("%s\n", QApplication::focusWidget()->objectName().toStdString().c_str());
+    }
+    
+    QKeyEvent *keyEvent1 = new QKeyEvent(QEvent::KeyPress, Qt::Key_1, Qt::NoModifier, "1");
+    QApplication::sendEvent(QApplication::focusWidget(), keyEvent1);
+    
+    QKeyEvent *keyEvent2 = new QKeyEvent(QEvent::KeyRelease, Qt::Key_1, Qt::NoModifier, "1");
+    QApplication::sendEvent(QApplication::focusWidget(), keyEvent2);
 }

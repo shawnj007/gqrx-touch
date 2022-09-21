@@ -22,6 +22,7 @@ signals:
 public slots:
 
 private slots:
+	void on_pushButton_d_1_clicked();
 
 private:
     Ui::DockTouchControls *ui;
