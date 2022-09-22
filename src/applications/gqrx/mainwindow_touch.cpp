@@ -213,7 +213,7 @@ MainWindow::MainWindow(const QString& cfgfile, bool edit_conf, QWidget *parent) 
     //ui->menu_View->addSeparator();
     //ui->menu_View->addAction(ui->mainToolBar->toggleViewAction());
     //ui->menu_View->addSeparator();
-    //ui->menu_View->addAction(ui->actionFullScreen);
+    ui->menu_View->addAction(ui->actionFullScreen);
 
     /* connect signals and slots */
     connect(ui->freqCtrl, SIGNAL(newFrequency(qint64)), this, SLOT(setNewFrequency(qint64)));
