@@ -130,6 +130,8 @@ MainWindow::MainWindow(const QString& cfgfile, bool edit_conf, QWidget *parent) 
     // create DXC Objects
     dxc_options = new DXCOptions(this);
 
+	printf("---Creating dock widgets.\n");
+
     /* create dock widgets */
     uiDockRxOpt = new DockRxOpt();
     uiDockRDS = new DockRDS();
@@ -1116,20 +1118,21 @@ void MainWindow::selectDemod(int mode_idx)
     case DockRxOpt::MODE_AM:
         rx->set_demod(receiver::RX_DEMOD_AM);
         ui->plotter->setDemodRanges(-40000, -200, 200, 40000, true);
-        uiDockAudio->setFftRange(0,6000);
+        uiDockAudio->setFftRange(-6000,6000);
         click_res = 100;
         break;
 
     case DockRxOpt::MODE_AM_SYNC:
         rx->set_demod(receiver::RX_DEMOD_AMSYNC);
         ui->plotter->setDemodRanges(-40000, -200, 200, 40000, true);
-        uiDockAudio->setFftRange(0,6000);
+        uiDockAudio->setFftRange(-6000,6000);
         click_res = 100;
         break;
 
     case DockRxOpt::MODE_NFM:
         ui->plotter->setDemodRanges(-40000, -1000, 1000, 40000, true);
-        uiDockAudio->setFftRange(0, 5000);
+        uiDockAudio->setFftRange(-5000, 5000);
+        uiDockAudio->resetAudioSpectrumZoom();
         rx->set_demod(receiver::RX_DEMOD_NFM);
         rx->set_fm_maxdev(uiDockRxOpt->currentMaxdev());
         rx->set_fm_deemph(uiDockRxOpt->currentEmph());
@@ -1141,7 +1144,7 @@ void MainWindow::selectDemod(int mode_idx)
     case DockRxOpt::MODE_WFM_STEREO_OIRT:
         /* Broadcast FM */
         ui->plotter->setDemodRanges(-120e3, -10000, 10000, 120e3, true);
-        uiDockAudio->setFftRange(0,24000);  /** FIXME: get audio rate from rx **/
+        uiDockAudio->setFftRange(-24000,24000);  /** FIXME: get audio rate from rx **/
         click_res = 1000;
         if (mode_idx == DockRxOpt::MODE_WFM_MONO)
             rx->set_demod(receiver::RX_DEMOD_WFM_M);
@@ -1159,7 +1162,7 @@ void MainWindow::selectDemod(int mode_idx)
         /* LSB */
         rx->set_demod(receiver::RX_DEMOD_SSB);
         ui->plotter->setDemodRanges(-40000, -100, -5000, 0, false);
-        uiDockAudio->setFftRange(0,3000);
+        uiDockAudio->setFftRange(-3000,3000);
         click_res = 100;
         break;
 
@@ -1167,7 +1170,7 @@ void MainWindow::selectDemod(int mode_idx)
         /* USB */
         rx->set_demod(receiver::RX_DEMOD_SSB);
         ui->plotter->setDemodRanges(0, 5000, 100, 40000, false);
-        uiDockAudio->setFftRange(0,3000);
+        uiDockAudio->setFftRange(-3000,3000);
         click_res = 100;
         break;
 
@@ -1176,7 +1179,7 @@ void MainWindow::selectDemod(int mode_idx)
         rx->set_demod(receiver::RX_DEMOD_SSB);
         cwofs = -uiDockRxOpt->getCwOffset();
         ui->plotter->setDemodRanges(-5000, -100, 100, 5000, true);
-        uiDockAudio->setFftRange(0,1500);
+        uiDockAudio->setFftRange(-1500,1500);
         click_res = 10;
         break;
 
@@ -1185,7 +1188,7 @@ void MainWindow::selectDemod(int mode_idx)
         rx->set_demod(receiver::RX_DEMOD_SSB);
         cwofs = uiDockRxOpt->getCwOffset();
         ui->plotter->setDemodRanges(-5000, -100, 100, 5000, true);
-        uiDockAudio->setFftRange(0,1500);
+        uiDockAudio->setFftRange(-1500,1500);
         click_res = 10;
         break;
 

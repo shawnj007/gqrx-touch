@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+   <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
     <horstretch>1</horstretch>
     <verstretch>1</verstretch>
    </sizepolicy>
@@ -25,7 +25,7 @@
   <property name="maximumSize">
    <size>
     <width>524287</width>
-    <height>440</height>
+    <height>519</height>
    </size>
   </property>
   <property name="windowIcon">
@@ -46,7 +46,7 @@
   </property>
   <widget class="QWidget" name="dockWidgetContents">
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
@@ -55,6 +55,12 @@
     <size>
      <width>443</width>
      <height>126</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>500</height>
     </size>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -77,7 +83,7 @@
      <widget class="QTabWidget" name="tabWidget">
       <property name="sizePolicy">
        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-        <horstretch>0</horstretch>
+        <horstretch>1</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
@@ -87,20 +93,32 @@
         <height>126</height>
        </size>
       </property>
-      <property name="currentIndex">
-       <number>2</number>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
       </property>
-      <widget class="QWidget" name="tab_3">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_peak_range">
        <property name="minimumSize">
         <size>
          <width>439</width>
          <height>95</height>
         </size>
        </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
        <attribute name="title">
         <string>Peak\Range</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0">
+       <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,0">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -118,6 +136,12 @@
         </property>
         <item>
          <widget class="QFrame" name="frame_peak_range">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="minimumSize">
            <size>
             <width>439</width>
@@ -130,7 +154,7 @@
             <height>16777215</height>
            </size>
           </property>
-          <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0,0">
+          <layout class="QGridLayout" name="gridLayout" columnstretch="0,1,1,0,0">
            <property name="leftMargin">
             <number>0</number>
            </property>
@@ -146,129 +170,24 @@
            <property name="spacing">
             <number>0</number>
            </property>
-           <item row="1" column="2" rowspan="2">
-            <widget class="QPushButton" name="lockButton">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>50</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="palette">
-              <palette>
-               <active/>
-               <inactive/>
-               <disabled/>
-              </palette>
-             </property>
-             <property name="toolTip">
-              <string>Lock panadapter and waterfall sliders together</string>
-             </property>
-             <property name="statusTip">
-              <string>Lock panadapter and waterfall sliders together</string>
-             </property>
-             <property name="text">
-              <string>Lock</string>
-             </property>
-             <property name="checkable">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="ctkRangeSlider" name="pandRangeSlider">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="palette">
-              <palette>
-               <active/>
-               <inactive/>
-               <disabled/>
-              </palette>
-             </property>
-             <property name="toolTip">
-              <string>Set pandapter dB range</string>
-             </property>
-             <property name="statusTip">
-              <string>Set pandapter dB range</string>
-             </property>
-             <property name="minimum">
-              <number>-160</number>
-             </property>
-             <property name="maximum">
-              <number>0</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="wfRangeLabel">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="palette">
-              <palette>
-               <active/>
-               <inactive/>
-               <disabled/>
-              </palette>
-             </property>
-             <property name="toolTip">
-              <string>Set waterfall dB range</string>
-             </property>
-             <property name="statusTip">
-              <string>Set waterfall dB range</string>
-             </property>
-             <property name="text">
-              <string>Wf. dB</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-             </property>
-            </widget>
-           </item>
            <item row="0" column="0">
             <widget class="QLabel" name="peakLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
-               <width>0</width>
+               <width>100</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -286,164 +205,24 @@
              </property>
             </widget>
            </item>
-           <item row="2" column="3">
-            <widget class="QPushButton" name="resetButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>50</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="palette">
-              <palette>
-               <active/>
-               <inactive/>
-               <disabled/>
-              </palette>
-             </property>
-             <property name="toolTip">
-              <string>Reset zoom level to 1x</string>
-             </property>
-             <property name="text">
-              <string>Reset</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="2">
-            <widget class="QPushButton" name="peakHoldButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>50</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="palette">
-              <palette>
-               <active/>
-               <inactive/>
-               <disabled/>
-              </palette>
-             </property>
-             <property name="toolTip">
-              <string>Toggle peak hold in FFT</string>
-             </property>
-             <property name="text">
-              <string>Hold</string>
-             </property>
-             <property name="checkable">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QPushButton" name="demodButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>50</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="palette">
-              <palette>
-               <active/>
-               <inactive/>
-               <disabled/>
-              </palette>
-             </property>
-             <property name="toolTip">
-              <string>Center FFT around demodulator frequency</string>
-             </property>
-             <property name="text">
-              <string>Demod</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="ctkRangeSlider" name="wfRangeSlider">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="palette">
-              <palette>
-               <active/>
-               <inactive/>
-               <disabled/>
-              </palette>
-             </property>
-             <property name="toolTip">
-              <string>Set waterfall dB range</string>
-             </property>
-             <property name="statusTip">
-              <string>Set waterfall dB range</string>
-             </property>
-             <property name="minimum">
-              <number>-160</number>
-             </property>
-             <property name="maximum">
-              <number>0</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
            <item row="1" column="0">
             <widget class="QLabel" name="pandRangeLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
-               <width>0</width>
+               <width>100</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -467,24 +246,100 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
-            <widget class="QPushButton" name="peakDetectionButton">
+           <item row="0" column="4">
+            <widget class="QPushButton" name="centerButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
-               <width>50</width>
+               <width>80</width>
                <height>25</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>16777215</height>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="palette">
+              <palette>
+               <active/>
+               <inactive/>
+               <disabled/>
+              </palette>
+             </property>
+             <property name="toolTip">
+              <string>Center FFT around original center frequency</string>
+             </property>
+             <property name="text">
+              <string>Center</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="wfRangeLabel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="palette">
+              <palette>
+               <active/>
+               <inactive/>
+               <disabled/>
+              </palette>
+             </property>
+             <property name="toolTip">
+              <string>Set waterfall dB range</string>
+             </property>
+             <property name="statusTip">
+              <string>Set waterfall dB range</string>
+             </property>
+             <property name="text">
+              <string>Wf. dB</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="peakDetectionButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>80</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -505,24 +360,27 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="3">
-            <widget class="QPushButton" name="centerButton">
+           <item row="1" column="3" rowspan="2">
+            <widget class="QPushButton" name="lockButton">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
-               <width>50</width>
-               <height>25</height>
+               <width>80</width>
+               <height>50</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>16777215</height>
+               <height>200</height>
               </size>
              </property>
              <property name="palette">
@@ -533,10 +391,212 @@
               </palette>
              </property>
              <property name="toolTip">
-              <string>Center FFT around original center frequency</string>
+              <string>Lock panadapter and waterfall sliders together</string>
+             </property>
+             <property name="statusTip">
+              <string>Lock panadapter and waterfall sliders together</string>
              </property>
              <property name="text">
-              <string>Center</string>
+              <string>Lock</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="resetButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>80</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="palette">
+              <palette>
+               <active/>
+               <inactive/>
+               <disabled/>
+              </palette>
+             </property>
+             <property name="toolTip">
+              <string>Reset zoom level to 1x</string>
+             </property>
+             <property name="text">
+              <string>Reset</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="demodButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>80</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="palette">
+              <palette>
+               <active/>
+               <inactive/>
+               <disabled/>
+              </palette>
+             </property>
+             <property name="toolTip">
+              <string>Center FFT around demodulator frequency</string>
+             </property>
+             <property name="text">
+              <string>Demod</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="peakHoldButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>80</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="palette">
+              <palette>
+               <active/>
+               <inactive/>
+               <disabled/>
+              </palette>
+             </property>
+             <property name="toolTip">
+              <string>Toggle peak hold in FFT</string>
+             </property>
+             <property name="text">
+              <string>Hold</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="ctkRangeSlider" name="pandRangeSlider">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="palette">
+              <palette>
+               <active/>
+               <inactive/>
+               <disabled/>
+              </palette>
+             </property>
+             <property name="toolTip">
+              <string>Set pandapter dB range</string>
+             </property>
+             <property name="statusTip">
+              <string>Set pandapter dB range</string>
+             </property>
+             <property name="minimum">
+              <number>-160</number>
+             </property>
+             <property name="maximum">
+              <number>0</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="ctkRangeSlider" name="wfRangeSlider">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="palette">
+              <palette>
+               <active/>
+               <inactive/>
+               <disabled/>
+              </palette>
+             </property>
+             <property name="toolTip">
+              <string>Set waterfall dB range</string>
+             </property>
+             <property name="statusTip">
+              <string>Set waterfall dB range</string>
+             </property>
+             <property name="minimum">
+              <number>-160</number>
+             </property>
+             <property name="maximum">
+              <number>0</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
              </property>
             </widget>
            </item>
@@ -544,49 +604,9 @@
          </widget>
         </item>
         <item>
-         <spacer name="verticalSpacer_3">
-          <property name="palette">
-           <palette>
-            <active>
-             <colorrole role="Highlight">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>48</red>
-                <green>140</green>
-                <blue>198</blue>
-               </color>
-              </brush>
-             </colorrole>
-            </active>
-            <inactive>
-             <colorrole role="Highlight">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>48</red>
-                <green>140</green>
-                <blue>198</blue>
-               </color>
-              </brush>
-             </colorrole>
-            </inactive>
-            <disabled>
-             <colorrole role="Highlight">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>145</red>
-                <green>145</green>
-                <blue>145</blue>
-               </color>
-              </brush>
-             </colorrole>
-            </disabled>
-           </palette>
-          </property>
+         <spacer name="verticalSpacer_2">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Expanding</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -598,7 +618,7 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_4">
+      <widget class="QWidget" name="tab_color_bands">
        <property name="minimumSize">
         <size>
          <width>439</width>
@@ -614,7 +634,7 @@
        <attribute name="title">
         <string>Colors\Bands</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,1">
+       <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,0">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -663,7 +683,7 @@
            <item row="1" column="1" colspan="3">
             <widget class="QComboBox" name="cmapComboBox">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -672,6 +692,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -689,7 +715,7 @@
            <item row="0" column="0">
             <widget class="QLabel" name="colorLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -698,6 +724,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -721,7 +753,7 @@
            <item row="0" column="2" colspan="2">
             <widget class="QPushButton" name="fillButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -735,7 +767,7 @@
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>16777215</height>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -762,7 +794,7 @@
            <item row="1" column="0">
             <widget class="QLabel" name="label_17">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -771,6 +803,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -791,7 +829,7 @@
            <item row="0" column="1">
             <widget class="QtColorPicker" name="colorPicker">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -800,6 +838,12 @@
               <size>
                <width>50</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -826,7 +870,7 @@
            <item row="2" column="0">
             <widget class="QLabel" name="label_18">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -835,6 +879,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -858,7 +908,7 @@
            <item row="2" column="1" colspan="3">
             <widget class="QComboBox" name="fftWinComboBox">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -867,6 +917,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -924,7 +980,7 @@
            <item row="2" column="4">
             <widget class="QLabel" name="wfLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -933,6 +989,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -953,7 +1015,7 @@
            <item row="0" column="4">
             <widget class="QCheckBox" name="bandPlanCheckbox">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -962,6 +1024,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="palette">
@@ -986,7 +1054,7 @@
          </widget>
         </item>
         <item>
-         <spacer name="verticalSpacer_2">
+         <spacer name="verticalSpacer">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
@@ -1000,17 +1068,23 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_5">
+      <widget class="QWidget" name="tab_view">
        <property name="minimumSize">
         <size>
          <width>439</width>
          <height>95</height>
         </size>
        </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
        <attribute name="title">
         <string>View</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_7" stretch="0,1">
+       <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,0">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -1040,22 +1114,40 @@
             <height>16777215</height>
            </size>
           </property>
-          <layout class="QGridLayout" name="gridLayout_5">
+          <layout class="QGridLayout" name="gridLayout_5" columnstretch="0,1,0,0,1,0">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <property name="spacing">
             <number>0</number>
            </property>
            <item row="0" column="0">
             <widget class="QLabel" name="fftSizeLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="text">
@@ -1072,15 +1164,21 @@
               <bool>true</bool>
              </property>
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1173,15 +1271,21 @@
            <item row="0" column="2">
             <widget class="QLabel" name="fftRbwLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1195,15 +1299,21 @@
            <item row="0" column="3">
             <widget class="QLabel" name="fftAvgLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1220,15 +1330,21 @@
            <item row="0" column="4">
             <widget class="QSlider" name="fftAvgSlider">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1254,15 +1370,21 @@
            <item row="1" column="0">
             <widget class="QLabel" name="fftRateLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="text">
@@ -1276,15 +1398,21 @@
            <item row="1" column="1">
             <widget class="QComboBox" name="fftRateComboBox">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1353,15 +1481,21 @@
            <item row="1" column="2">
             <widget class="QLabel" name="fftOvrLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1378,15 +1512,21 @@
            <item row="1" column="3">
             <widget class="QLabel" name="pandLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="text">
@@ -1400,15 +1540,21 @@
            <item row="1" column="4">
             <widget class="QSlider" name="fftSplitSlider">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1431,15 +1577,21 @@
            <item row="2" column="0">
             <widget class="QLabel" name="label_19">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1459,15 +1611,21 @@
            <item row="2" column="1">
             <widget class="QComboBox" name="wfSpanComboBox">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1553,15 +1711,21 @@
            <item row="2" column="2">
             <widget class="QLabel" name="wfResLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1578,15 +1742,21 @@
            <item row="2" column="3">
             <widget class="QLabel" name="zoomLAbel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1606,15 +1776,21 @@
            <item row="2" column="4">
             <widget class="QSlider" name="fftZoomSlider">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1649,15 +1825,21 @@
            <item row="2" column="5">
             <widget class="QLabel" name="zoomLevelLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+               <verstretch>1</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1678,7 +1860,7 @@
          </widget>
         </item>
         <item>
-         <spacer name="verticalSpacer">
+         <spacer name="verticalSpacer_3">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>

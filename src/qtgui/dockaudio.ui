@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
     <horstretch>1</horstretch>
     <verstretch>1</verstretch>
    </sizepolicy>
@@ -25,14 +25,44 @@
   <property name="maximumSize">
    <size>
     <width>524287</width>
-    <height>440</height>
+    <height>360</height>
    </size>
   </property>
   <property name="palette">
    <palette>
-    <active/>
-    <inactive/>
-    <disabled/>
+    <active>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>48</red>
+        <green>140</green>
+        <blue>198</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>48</red>
+        <green>140</green>
+        <blue>198</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>145</red>
+        <green>145</green>
+        <blue>145</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
    </palette>
   </property>
   <property name="windowIcon">
@@ -61,6 +91,12 @@
      <height>137</height>
     </size>
    </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>500</height>
+    </size>
+   </property>
    <property name="sizeIncrement">
     <size>
      <width>0</width>
@@ -69,9 +105,39 @@
    </property>
    <property name="palette">
     <palette>
-     <active/>
-     <inactive/>
-     <disabled/>
+     <active>
+      <colorrole role="Highlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>48</red>
+         <green>140</green>
+         <blue>198</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Highlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>48</red>
+         <green>140</green>
+         <blue>198</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Highlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>145</red>
+         <green>145</green>
+         <blue>145</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
     </palette>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -105,7 +171,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_FFT">
        <property name="minimumSize">
@@ -120,7 +186,7 @@
        <attribute name="toolTip">
         <string>Audio FFT settings</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,1">
+       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,1,0">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -141,17 +207,17 @@
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>16777215</height>
+            <height>100</height>
            </size>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1,0">
            <property name="spacing">
             <number>0</number>
            </property>
            <item>
             <widget class="QLabel" name="fftSplitLabel1">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -160,6 +226,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -185,6 +257,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -218,6 +296,12 @@
                <height>25</height>
               </size>
              </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
              <property name="toolTip">
               <string>Adjust split between pandapter and waterfall</string>
              </property>
@@ -231,22 +315,40 @@
         </item>
         <item>
          <widget class="QFrame" name="frame_range">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>16777215</height>
+            <height>100</height>
            </size>
           </property>
-          <layout class="QGridLayout" name="gridLayout_2">
+          <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,0,0">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <property name="spacing">
             <number>0</number>
            </property>
            <item row="0" column="2" rowspan="2">
             <widget class="QPushButton" name="audioLockButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
@@ -258,7 +360,7 @@
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>16777215</height>
+               <height>200</height>
               </size>
              </property>
              <property name="toolTip">
@@ -281,15 +383,21 @@
            <item row="1" column="1">
             <widget class="ctkRangeSlider" name="wfRangeSlider">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -312,15 +420,21 @@
            <item row="0" column="1">
             <widget class="ctkRangeSlider" name="pandRangeSlider">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -343,15 +457,21 @@
            <item row="0" column="0">
             <widget class="QLabel" name="pandRangeLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
+              <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
-               <width>0</width>
+               <width>140</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
               </size>
              </property>
              <property name="toolTip">
@@ -368,15 +488,21 @@
            <item row="1" column="0">
             <widget class="QLabel" name="wfRangeLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
+              <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
               </sizepolicy>
              </property>
              <property name="minimumSize">
               <size>
-               <width>0</width>
+               <width>140</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
               </size>
              </property>
              <property name="toolTip">
@@ -427,7 +553,7 @@
        <attribute name="toolTip">
         <string>Recording settings</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -455,7 +581,7 @@
            <item row="1" column="1">
             <widget class="QPushButton" name="recDirButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>1</horstretch>
                <verstretch>1</verstretch>
               </sizepolicy>
@@ -464,6 +590,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -477,7 +609,7 @@
            <item row="1" column="0">
             <widget class="QLineEdit" name="recDirEdit">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>1</horstretch>
                <verstretch>1</verstretch>
               </sizepolicy>
@@ -488,6 +620,12 @@
                <height>25</height>
               </size>
              </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
              <property name="toolTip">
               <string>Enter a location for recordings</string>
              </property>
@@ -496,7 +634,7 @@
            <item row="0" column="0" colspan="2">
             <widget class="QLabel" name="recDirLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>1</horstretch>
                <verstretch>1</verstretch>
               </sizepolicy>
@@ -505,6 +643,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="text">
@@ -543,7 +687,7 @@
        <attribute name="toolTip">
         <string>Network streaming settings</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,1">
+       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,0">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -571,10 +715,10 @@
            <property name="spacing">
             <number>0</number>
            </property>
-           <item row="1" column="2">
-            <widget class="QCheckBox" name="udpStereo">
+           <item row="0" column="0">
+            <widget class="QLabel" name="hostLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>1</horstretch>
                <verstretch>1</verstretch>
               </sizepolicy>
@@ -585,15 +729,24 @@
                <height>25</height>
               </size>
              </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Network host to stream to</string>
+             </property>
              <property name="text">
-              <string>Stereo</string>
+              <string>UDP host</string>
              </property>
             </widget>
            </item>
-           <item row="1" column="1">
-            <widget class="QSpinBox" name="udpPort">
+           <item row="1" column="0">
+            <widget class="QLabel" name="portLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>1</horstretch>
                <verstretch>1</verstretch>
               </sizepolicy>
@@ -602,6 +755,93 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Network port to stream to</string>
+             </property>
+             <property name="text">
+              <string>UDP port</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QCheckBox" name="udpStereo">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Stereo</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="3">
+            <widget class="QLineEdit" name="udpHost">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Network host to stream to</string>
+             </property>
+             <property name="text">
+              <string>localhost</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="udpPort">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -615,72 +855,6 @@
              </property>
              <property name="value">
               <number>7355</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="portLabel">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>Network port to stream to</string>
-             </property>
-             <property name="text">
-              <string>UDP port</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" colspan="2">
-            <widget class="QLineEdit" name="udpHost">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>Network host to stream to</string>
-             </property>
-             <property name="text">
-              <string>localhost</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="hostLabel">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>Network host to stream to</string>
-             </property>
-             <property name="text">
-              <string>UDP host</string>
              </property>
             </widget>
            </item>
@@ -721,7 +895,7 @@
        <attribute name="title">
         <string>Output</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,1">
+       <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,0">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -761,10 +935,10 @@
            <property name="spacing">
             <number>0</number>
            </property>
-           <item row="0" column="2">
-            <widget class="QPushButton" name="audioRecButton">
+           <item row="1" column="1">
+            <widget class="QPushButton" name="audioStreamButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>1</horstretch>
                <verstretch>1</verstretch>
               </sizepolicy>
@@ -778,7 +952,81 @@
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>16777215</height>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Stream raw audio over UDP</string>
+             </property>
+             <property name="statusTip">
+              <string>Stream raw audio over UDP</string>
+             </property>
+             <property name="text">
+              <string>UDP</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="audioConfButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Audio settings</string>
+             </property>
+             <property name="statusTip">
+              <string>Audio settings</string>
+             </property>
+             <property name="text">
+              <string>...</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="audioRecButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -801,10 +1049,10 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="1" colspan="2">
-            <widget class="QSlider" name="audioGainSlider">
+           <item row="1" column="0">
+            <widget class="QPushButton" name="audioMuteButton">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>1</horstretch>
                <verstretch>1</verstretch>
               </sizepolicy>
@@ -813,6 +1061,151 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Mute audio output</string>
+             </property>
+             <property name="statusTip">
+              <string>Mute audio output</string>
+             </property>
+             <property name="text">
+              <string>Mute</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QPushButton" name="audioPlayButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>Playback previously recorded audio</string>
+             </property>
+             <property name="statusTip">
+              <string>Playback previously recorded audio</string>
+             </property>
+             <property name="text">
+              <string>Play</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>16</width>
+               <height>16</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="audioGainLabel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Gain:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QLabel" name="audioGainDbLabel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>-6.0 dB</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="margin">
+              <number>0</number>
+             </property>
+             <property name="indent">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="3">
+            <widget class="QSlider" name="audioGainSlider">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <horstretch>1</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -835,168 +1228,10 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="0">
-            <widget class="QPushButton" name="audioMuteButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>Mute audio output</string>
-             </property>
-             <property name="statusTip">
-              <string>Mute audio output</string>
-             </property>
-             <property name="text">
-              <string>Mute</string>
-             </property>
-             <property name="checkable">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="audioGainLabel">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Gain:</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="3">
-            <widget class="QLabel" name="audioGainDbLabel">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>-6.0 dB</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-             <property name="margin">
-              <number>0</number>
-             </property>
-             <property name="indent">
-              <number>1</number>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QPushButton" name="audioStreamButton">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>Stream raw audio over UDP</string>
-             </property>
-             <property name="statusTip">
-              <string>Stream raw audio over UDP</string>
-             </property>
-             <property name="text">
-              <string>UDP</string>
-             </property>
-             <property name="checkable">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="4">
-            <widget class="QPushButton" name="audioConfButton">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>Audio settings</string>
-             </property>
-             <property name="statusTip">
-              <string>Audio settings</string>
-             </property>
-             <property name="text">
-              <string>...</string>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>16</width>
-               <height>16</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="4">
+           <item row="2" column="0" colspan="5">
             <widget class="QLabel" name="audioRecLabel">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                <horstretch>1</horstretch>
                <verstretch>1</verstretch>
               </sizepolicy>
@@ -1005,6 +1240,12 @@
               <size>
                <width>0</width>
                <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
               </size>
              </property>
              <property name="toolTip">
@@ -1015,49 +1256,6 @@
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="3">
-            <widget class="QPushButton" name="audioPlayButton">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-               <horstretch>1</horstretch>
-               <verstretch>1</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="toolTip">
-              <string>Playback previously recorded audio</string>
-             </property>
-             <property name="statusTip">
-              <string>Playback previously recorded audio</string>
-             </property>
-             <property name="text">
-              <string>Play</string>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>16</width>
-               <height>16</height>
-              </size>
-             </property>
-             <property name="checkable">
-              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -1145,15 +1343,15 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>ctkRangeSlider</class>
+   <extends>QSlider</extends>
+   <header>qtgui/ctk/ctkRangeSlider.h</header>
+  </customwidget>
+  <customwidget>
    <class>CPlotter</class>
    <extends>QFrame</extends>
    <header>qtgui/plotter.h</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>ctkRangeSlider</class>
-   <extends>QSlider</extends>
-   <header>qtgui/ctk/ctkRangeSlider.h</header>
   </customwidget>
  </customwidgets>
  <resources>

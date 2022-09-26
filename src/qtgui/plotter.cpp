@@ -1298,7 +1298,8 @@ void CPlotter::drawOverlay()
         static const int fontHeight = fm.ascent() + 1;
         static const int slant = 5;
         static const int levelHeight = fontHeight + 5;
-        static const int nLevels = h / (levelHeight + slant);
+        int nLevels = h / (levelHeight + slant);
+        
         if (m_BookmarksEnabled)
         {
             tags = Bookmarks::Get().getBookmarksInRange(m_CenterFreq + m_FftCenter - m_Span / 2,

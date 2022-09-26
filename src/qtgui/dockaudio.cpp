@@ -37,7 +37,7 @@ DockAudio::DockAudio(QWidget *parent) :
     rx_freq(144000000)
 {
     ui->setupUi(this);
-
+    printf("---Creating Audio Dock\n");
 #ifdef Q_OS_LINUX
     // buttons can be smaller than 50x32
     //ui->audioMuteButton->setMinimumSize(48, 24);
@@ -46,8 +46,7 @@ DockAudio::DockAudio(QWidget *parent) :
     //ui->audioPlayButton->setMinimumSize(48, 24);
     //ui->audioConfButton->setMinimumSize(48, 24);
 #endif
-
-    audioOptions = new CAudioOptions(this);
+    audioOptions = new CAudioOptions(this, ui);
 
     connect(audioOptions, SIGNAL(newFftSplit(int)), ui->audioSpectrum, SLOT(setPercent2DScreen(int)));
     connect(audioOptions, SIGNAL(newPandapterRange(int,int)), this, SLOT(setNewPandapterRange(int,int)));
@@ -455,6 +454,52 @@ void DockAudio::setNewWaterfallRange(int min, int max)
     ui->audioSpectrum->setWaterfallRange(min, max);
 }
 
+void DockAudio::on_fftSplitSlider_valueChanged(int value)
+{
+    audioOptions->on_fftSplitSlider_valueChanged(value);
+}
+
+void DockAudio::on_pandRangeSlider_valuesChanged(int min, int max)
+{
+    audioOptions->on_pandRangeSlider_valuesChanged(min, max);
+}
+
+void DockAudio::on_wfRangeSlider_valuesChanged(int min, int max)
+{
+    audioOptions->on_wfRangeSlider_valuesChanged(min, max);
+}
+
+void DockAudio::on_recDirEdit_textChanged(const QString &dir)
+{
+    audioOptions->on_recDirEdit_textChanged(dir);
+}
+
+void DockAudio::on_recDirButton_clicked()
+{
+    audioOptions->on_recDirButton_clicked();
+}
+
+void DockAudio::on_udpHost_textChanged(const QString &text)
+{
+    audioOptions->on_udpHost_textChanged(text);
+}
+
+void DockAudio::on_udpPort_valueChanged(int port)
+{
+    audioOptions->on_udpPort_valueChanged(port);
+}
+
+void DockAudio::on_udpStereo_stateChanged(int state)
+{
+    audioOptions->on_udpStereo_stateChanged(state);
+}
+
+/** Lock button toggled */
+void DockAudio::on_audioLockButton_toggled(bool checked)
+{
+    audioOptions->on_audioLockButton_toggled(checked);
+}
+
 /*! \brief Slot called when a new valid recording directory has been selected
  *         in the audio conf dialog.
  */
@@ -498,4 +543,8 @@ void DockAudio::increaseAudioGainShortcut() {
 
 void DockAudio::decreaseAudioGainShortcut() {
 	ui->audioGainSlider->triggerAction(QSlider::SliderPageStepSub);
+}
+
+void DockAudio::resetAudioSpectrumZoom() {
+	ui->audioSpectrum->resetHorizontalZoom();
 }

@@ -101,6 +101,8 @@ private:
 
     DockTouchControls  *uiDockTouchControls;
 
+    CAudioOptions  *uiDockAudioOptions;
+
     CIqTool        *iq_tool;
     DXCOptions     *dxc_options;
 

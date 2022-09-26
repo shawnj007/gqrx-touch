@@ -128,9 +128,9 @@ void DockTouchControls::on_pushButton_width_down_clicked() { }
 void DockTouchControls::on_pushButton_width_up_clicked()   { }
 
 // Up/Down/Enter
-void DockTouchControls::on_pushButton_down_clicked()  { DockTouchControls::pushButton(Qt::Key_Down,  Qt::NoModifier); }
+void DockTouchControls::on_pushButton_down_clicked()  { DockTouchControls::pushButton(Qt::Key_Down,  Qt::NoModifier); DockTouchControls::on_pushButton_enter_clicked(); }
 void DockTouchControls::on_pushButton_enter_clicked() { DockTouchControls::pushButton(Qt::Key_Enter, Qt::NoModifier); }
-void DockTouchControls::on_pushButton_up_clicked()    { DockTouchControls::pushButton(Qt::Key_Up,    Qt::NoModifier); }
+void DockTouchControls::on_pushButton_up_clicked()    { DockTouchControls::pushButton(Qt::Key_Up,    Qt::NoModifier); DockTouchControls::on_pushButton_enter_clicked(); }
 
 // Controls
 void DockTouchControls::on_pushButton_decode_clicked() { }
