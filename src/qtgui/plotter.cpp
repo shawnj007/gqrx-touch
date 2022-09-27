@@ -1393,7 +1393,6 @@ void CPlotter::drawOverlay()
             int band_right = xFromFreq(band.maxFrequency);
             int band_width = band_right - band_left;
             
-            printf("%6d %6d\n", last_left, band_left);
             if (band_left < last_left) {
                 --bandLevel;
             } else {
