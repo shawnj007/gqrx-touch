@@ -168,7 +168,7 @@
              </size>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="tab_Numbers">
              <property name="sizePolicy">
@@ -179,13 +179,13 @@
              </property>
              <property name="minimumSize">
               <size>
-               <width>207</width>
+               <width>200</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>399</width>
+               <width>400</width>
                <height>348</height>
               </size>
              </property>
@@ -555,13 +555,13 @@
              </property>
              <property name="minimumSize">
               <size>
-               <width>207</width>
+               <width>200</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>399</width>
+               <width>400</width>
                <height>348</height>
               </size>
              </property>

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>453</width>
+    <width>450</width>
     <height>156</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>453</width>
+    <width>450</width>
     <height>156</height>
    </size>
   </property>
@@ -30,39 +30,9 @@
   </property>
   <property name="palette">
    <palette>
-    <active>
-     <colorrole role="Highlight">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>48</red>
-        <green>140</green>
-        <blue>198</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </active>
-    <inactive>
-     <colorrole role="Highlight">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>48</red>
-        <green>140</green>
-        <blue>198</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </inactive>
-    <disabled>
-     <colorrole role="Highlight">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>145</red>
-        <green>145</green>
-        <blue>145</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </disabled>
+    <active/>
+    <inactive/>
+    <disabled/>
    </palette>
   </property>
   <property name="windowIcon">
@@ -87,7 +57,7 @@
    </property>
    <property name="minimumSize">
     <size>
-     <width>453</width>
+     <width>450</width>
      <height>137</height>
     </size>
    </property>
@@ -166,7 +136,7 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>453</width>
+        <width>400</width>
         <height>137</height>
        </size>
       </property>
@@ -176,7 +146,7 @@
       <widget class="QWidget" name="tab">
        <property name="minimumSize">
         <size>
-         <width>449</width>
+         <width>400</width>
          <height>106</height>
         </size>
        </property>
@@ -235,7 +205,7 @@
       <widget class="QWidget" name="tab_FFT">
        <property name="minimumSize">
         <size>
-         <width>449</width>
+         <width>400</width>
          <height>106</height>
         </size>
        </property>
@@ -596,7 +566,7 @@
       <widget class="QWidget" name="tab_recording">
        <property name="minimumSize">
         <size>
-         <width>449</width>
+         <width>400</width>
          <height>106</height>
         </size>
        </property>
@@ -736,7 +706,7 @@
       <widget class="QWidget" name="tab_network">
        <property name="minimumSize">
         <size>
-         <width>449</width>
+         <width>400</width>
          <height>106</height>
         </size>
        </property>
@@ -947,7 +917,7 @@
       <widget class="QWidget" name="tab_output">
        <property name="minimumSize">
         <size>
-         <width>449</width>
+         <width>400</width>
          <height>106</height>
         </size>
        </property>
@@ -1343,15 +1313,15 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>ctkRangeSlider</class>
-   <extends>QSlider</extends>
-   <header>qtgui/ctk/ctkRangeSlider.h</header>
-  </customwidget>
-  <customwidget>
    <class>CPlotter</class>
    <extends>QFrame</extends>
    <header>qtgui/plotter.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ctkRangeSlider</class>
+   <extends>QSlider</extends>
+   <header>qtgui/ctk/ctkRangeSlider.h</header>
   </customwidget>
  </customwidgets>
  <resources>
