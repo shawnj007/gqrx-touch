@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-
+add_definitions(-DQT_NO_DEBUG_OUTPUT)
 # Project name
 project(gqrx)
 set(${PROJECT_NAME}_MAJOR "2")

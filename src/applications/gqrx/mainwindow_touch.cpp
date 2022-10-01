@@ -229,6 +229,7 @@ MainWindow::MainWindow(const QString& cfgfile, bool edit_conf, QWidget *parent) 
     connect(uiDockInputCtl, SIGNAL(autoGainChanged(bool)), this, SLOT(setAutoGain(bool)));
     connect(uiDockInputCtl, SIGNAL(freqCorrChanged(double)), this, SLOT(setFreqCorr(double)));
     connect(uiDockInputCtl, SIGNAL(iqSwapChanged(bool)), this, SLOT(setIqSwap(bool)));
+    connect(uiDockInputCtl, SIGNAL(dcBlockChanged(bool)), this, SLOT(setDcBlock(bool)));
     connect(uiDockInputCtl, SIGNAL(dcCancelChanged(bool)), this, SLOT(setDcCancel(bool)));
     connect(uiDockInputCtl, SIGNAL(iqBalanceChanged(bool)), this, SLOT(setIqBalance(bool)));
     connect(uiDockInputCtl, SIGNAL(ignoreLimitsChanged(bool)), this, SLOT(setIgnoreLimits(bool)));
@@ -975,6 +976,12 @@ void MainWindow::setFreqCorr(double ppm)
 void MainWindow::setIqSwap(bool reversed)
 {
     rx->set_iq_swap(reversed);
+}
+
+/** Enable/disable automatic DC blocker. */
+void MainWindow::setDcBlock(bool enabled)
+{
+    rx->set_dc_blocker(enabled);
 }
 
 /** Enable/disable automatic DC removal. */

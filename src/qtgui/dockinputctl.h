@@ -84,6 +84,9 @@ public:
     void    setIqSwap(bool reversed);
     bool    iqSwap(void);
 
+    void    setDcBlock(bool enabled);
+    bool    dcBlock(void);
+
     void    setDcCancel(bool enabled);
     bool    dcCancel(void);
 
@@ -111,6 +114,7 @@ signals:
     void freqCorrChanged(double value);
     void lnbLoChanged(double freq_mhz);
     void iqSwapChanged(bool reverse);
+    void dcBlockChanged(bool enabled);
     void dcCancelChanged(bool enabled);
     void iqBalanceChanged(bool enabled);
     void ignoreLimitsChanged(bool ignore);
@@ -126,6 +130,7 @@ private slots:
     void on_agcButton_toggled(bool checked);
     void on_freqCorrSpinBox_valueChanged(double value);
     void on_iqSwapButton_toggled(bool checked);
+    void on_dcBlockButton_toggled(bool checked);
     void on_dcCancelButton_toggled(bool checked);
     void on_iqBalanceButton_toggled(bool checked);
     void on_ignoreButton_toggled(bool checked);

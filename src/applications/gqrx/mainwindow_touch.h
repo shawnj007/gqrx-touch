@@ -149,6 +149,7 @@ private slots:
     void setAutoGain(bool enabled);
     void setFreqCorr(double ppm);
     void setIqSwap(bool reversed);
+    void setDcBlock(bool enabled);
     void setDcCancel(bool enabled);
     void setIqBalance(bool enabled);
     void setIgnoreLimits(bool ignore_limits);

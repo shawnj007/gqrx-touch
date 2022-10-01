@@ -58,6 +58,9 @@ void DockInputCtl::readSettings(QSettings * settings)
     setDcCancel(settings->value("input/dc_cancel", false).toBool());
     emit dcCancelChanged(ui->dcCancelButton->isChecked());
 
+    setDcBlock(settings->value("input/dc_block", false).toBool());
+    emit dcBlockChanged(ui->dcBlockButton->isChecked());
+
     setIqBalance(settings->value("input/iq_balance", false).toBool());
     emit iqBalanceChanged(ui->iqBalanceButton->isChecked());
 
@@ -297,6 +300,18 @@ bool DockInputCtl::iqSwap(void)
     return ui->iqSwapButton->isChecked();
 }
 
+/** Enable automatic DC blocker. */
+void DockInputCtl::setDcBlock(bool enabled)
+{
+    ui->dcBlockButton->setChecked(enabled);
+}
+
+/** Get current DC remove status. */
+bool DockInputCtl::dcBlock(void)
+{
+    return ui->dcBlockButton->isChecked();
+}
+
 /** Enable automatic DC removal. */
 void DockInputCtl::setDcCancel(bool enabled)
 {
@@ -476,6 +491,15 @@ void DockInputCtl::on_freqCorrSpinBox_valueChanged(double value)
 void DockInputCtl::on_iqSwapButton_toggled(bool checked)
 {
     emit iqSwapChanged(checked);
+}
+
+/**
+ * DC block checkbox changed.
+ * @param checked True if DC blocker is enabled, false otherwise
+ */
+void DockInputCtl::on_dcBlockButton_toggled(bool checked)
+{
+    emit dcBlockChanged(checked);
 }
 
 /**

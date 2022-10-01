@@ -49,6 +49,7 @@ dc_corr_cc::dc_corr_cc(double sample_rate, double tau)
     qDebug() << "IQ DCR alpha:" << d_alpha;
 
     d_iir = gr::filter::single_pole_iir_filter_cc::make(d_alpha, 1);
+    
     d_sub = gr::blocks::sub_cc::make(1);
 
     connect(self(), 0, d_iir, 0);
@@ -85,6 +86,48 @@ void dc_corr_cc::set_tau(double tau)
     qDebug() << "IQ DCR alpha:" << d_alpha;
 }
 
+
+
+dc_blocker_cc_sptr make_dc_blocker_cc(int D, bool long_form)
+{
+    return gnuradio::get_initial_sptr(new dc_blocker_cc(D, long_form));
+}
+
+
+dc_blocker_cc::dc_blocker_cc(int D, bool long_form)
+    : gr::hier_block2 ("dc_blocker_cc",
+          gr::io_signature::make(1, 1, sizeof(gr_complex)),
+          gr::io_signature::make(1, 1, sizeof(gr_complex)))
+{
+    d_blk = gr::filter::dc_blocker_cc::make(D, long_form);
+    d_sub = gr::blocks::sub_cc::make(1);
+
+    connect(self(), 0, d_blk, 0);
+    //connect(self(), 0, d_sub, 0);
+    //connect(d_blk, 0, d_sub, 1);
+    //connect(d_sub, 0, self(), 0);
+    connect(d_blk, 0, self(), 0);
+}
+
+dc_blocker_cc::~dc_blocker_cc()
+{
+    
+}
+/*
+dc_blocker_cc::set_delay_line(int D)
+{
+    d_delay = D;
+
+    qDebug() << "DC Blocker Delay Line Length:" << d_delay;
+}
+
+dc_blocker_cc::set_long_form(bool long_form)
+{
+    d_long_form = long_form;
+
+    qDebug() << "DC Blocker Long Form: " << (d_delay?"enabled":"disabled");
+}
+*/
 
 /** I/Q swap **/
 iq_swap_cc_sptr make_iq_swap_cc(bool enabled)
