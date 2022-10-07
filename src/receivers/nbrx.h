@@ -40,7 +40,7 @@
 class nbrx;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<nbrx> nbrx_sptr;
+typedef std::shared_ptr<nbrx> nbrx_sptr;
 #else
 typedef std::shared_ptr<nbrx> nbrx_sptr;
 #endif

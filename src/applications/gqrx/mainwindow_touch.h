@@ -151,6 +151,7 @@ private slots:
     void setIqSwap(bool reversed);
     void setDcBlock(bool enabled);
     void setDcCancel(bool enabled);
+    void setDcTune(bool enabled);
     void setIqBalance(bool enabled);
     void setIgnoreLimits(bool ignore_limits);
     void setFreqCtrlReset(bool enabled);

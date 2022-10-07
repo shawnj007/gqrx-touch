@@ -58,8 +58,8 @@ class rx_rds;
 class rx_rds_store;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<rx_rds> rx_rds_sptr;
-typedef boost::shared_ptr<rx_rds_store> rx_rds_store_sptr;
+typedef std::shared_ptr<rx_rds> rx_rds_sptr;
+typedef std::shared_ptr<rx_rds_store> rx_rds_store_sptr;
 #else
 typedef std::shared_ptr<rx_rds> rx_rds_sptr;
 typedef std::shared_ptr<rx_rds_store> rx_rds_store_sptr;

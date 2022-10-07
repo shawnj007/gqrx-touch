@@ -32,8 +32,8 @@ class resampler_cc;
 class resampler_ff;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<resampler_cc> resampler_cc_sptr;
-typedef boost::shared_ptr<resampler_ff> resampler_ff_sptr;
+typedef std::shared_ptr<resampler_cc> resampler_cc_sptr;
+typedef std::shared_ptr<resampler_ff> resampler_ff_sptr;
 #else
 typedef std::shared_ptr<resampler_cc> resampler_cc_sptr;
 typedef std::shared_ptr<resampler_ff> resampler_ff_sptr;

@@ -27,7 +27,7 @@ class RDS_API decoder : virtual public gr::sync_block
 {
 public:
 #if GNURADIO_VERSION < 0x030900
-	typedef boost::shared_ptr<decoder> sptr;
+	typedef std::shared_ptr<decoder> sptr;
 #else
 	typedef std::shared_ptr<decoder> sptr;
 #endif

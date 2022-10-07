@@ -512,6 +512,15 @@ void DockInputCtl::on_dcCancelButton_toggled(bool checked)
 }
 
 /**
+ * DC removal checkbox changed.
+ * @param checked True if DC tune is enabled, false otherwise
+ */
+void DockInputCtl::on_dcTuneButton_toggled(bool checked)
+{
+	emit dcTuneChanged(checked);
+}
+
+/**
  * IQ balance checkbox changed.
  * @param checked True if automatic IQ balance is enabled, false otherwise
  */

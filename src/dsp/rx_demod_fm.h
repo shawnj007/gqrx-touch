@@ -29,7 +29,7 @@
 
 class rx_demod_fm;
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<rx_demod_fm> rx_demod_fm_sptr;
+typedef std::shared_ptr<rx_demod_fm> rx_demod_fm_sptr;
 #else
 typedef std::shared_ptr<rx_demod_fm> rx_demod_fm_sptr;
 #endif

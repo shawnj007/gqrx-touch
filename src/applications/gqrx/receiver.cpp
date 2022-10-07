@@ -71,6 +71,7 @@ receiver::receiver(const std::string input_device,
       d_iq_rev(false),
       d_dc_cancel(false),
       d_dc_blocker(false),
+      d_dc_tune(false),
       d_iq_balance(false),
       d_demod(RX_DEMOD_OFF)
 {
@@ -116,8 +117,10 @@ receiver::receiver(const std::string input_device,
 
     iq_swap = make_iq_swap_cc(false);
     dc_corr = make_dc_corr_cc(d_decim_rate, 1.0);
-    dc_block = make_dc_blocker_cc(4096, true);
+    dc_block = make_dc_blocker_cc(8192u, true);
     iq_fft = make_rx_fft_c(8192u, d_decim_rate, gr::fft::window::WIN_HANN);
+
+	dc_auto = gr::blocks::correctiq_auto::make(d_decim_rate, d_rf_freq, DEFAULT_AUDIO_GAIN, 1.0);
 
     audio_fft = make_rx_fft_f(8192u, d_audio_rate, gr::fft::window::WIN_HANN);
     audio_gain0 = gr::blocks::multiply_const_ff::make(0);
@@ -498,6 +501,24 @@ void receiver::set_dc_cancel(bool enable)
 }
 
 /**
+ * @brief Enable/disable automatic DC tuning in the I/Q stream.
+ * @param enable Whether DC tuning should enabled or not.
+ */
+void receiver::set_dc_tune(bool enable)
+{
+    if (enable == d_dc_tune)
+        return;
+
+    d_dc_tune = enable;
+    
+    printf("d_dc_tune: %s\n", (enable ? "enabled" : "disabled"));
+
+    // until we have a way to switch on/off
+    // inside the dc_corr_cc we do a reconf
+    set_demod(d_demod, true);
+}
+
+/**
  * @brief Get auto DC cancel status.
  * @retval true  Automatic DC removal is enabled.
  * @retval false Automatic DC removal is disabled.
@@ -505,6 +526,16 @@ void receiver::set_dc_cancel(bool enable)
 bool receiver::get_dc_cancel(void) const
 {
     return d_dc_cancel;
+}
+
+/**
+ * @brief Get auto DC cancel status.
+ * @retval true  Automatic DC removal is enabled.
+ * @retval false Automatic DC removal is disabled.
+ */
+bool receiver::get_dc_tune(void) const
+{
+    return d_dc_tune;
 }
 
 /**
@@ -571,6 +602,8 @@ receiver::status receiver::set_rf_freq(double freq_hz)
 
     src->set_center_freq(d_rf_freq);
     // FIXME: read back frequency?
+
+	dc_auto->set_freq(freq_hz);
 
     return STATUS_OK;
 }
@@ -647,6 +680,7 @@ receiver::status receiver::get_gain_range(std::string &name, double *start,
 receiver::status receiver::set_gain(std::string name, double value)
 {
     src->set_gain(value, name);
+    dc_auto->set_gain(value);
 
     return STATUS_OK;
 }
@@ -1367,6 +1401,12 @@ void receiver::connect_all(rx_chain type)
 
     tb->connect(b, 0, iq_swap, 0);
     b = iq_swap;
+    
+    if (d_dc_blocker)
+    {
+        tb->connect(b, 0, dc_block, 0);
+        b = dc_block;
+    }
 
     if (d_dc_cancel)
     {
@@ -1374,12 +1414,11 @@ void receiver::connect_all(rx_chain type)
         b = dc_corr;
     }
     
-    if (d_dc_blocker)
+    if (d_dc_tune)
     {
-        tb->connect(b, 0, dc_block, 0);
-        b = dc_block;
+        tb->connect(b, 0, dc_auto, 0);
+        b = dc_auto;
     }
-    
 
     // Visualization
     tb->connect(b, 0, iq_fft, 0);

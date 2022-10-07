@@ -27,7 +27,7 @@ class RDS_API parser : virtual public gr::block
 {
 public:
 #if GNURADIO_VERSION < 0x030900
-	typedef boost::shared_ptr<parser> sptr;
+	typedef std::shared_ptr<parser> sptr;
 #else
 	typedef std::shared_ptr<parser> sptr;
 #endif

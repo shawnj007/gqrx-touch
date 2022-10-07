@@ -39,7 +39,7 @@
 class wfmrx;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<wfmrx> wfmrx_sptr;
+typedef std::shared_ptr<wfmrx> wfmrx_sptr;
 #else
 typedef std::shared_ptr<wfmrx> wfmrx_sptr;
 #endif

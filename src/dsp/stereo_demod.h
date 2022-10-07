@@ -55,7 +55,7 @@
 class stereo_demod;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<stereo_demod> stereo_demod_sptr;
+typedef std::shared_ptr<stereo_demod> stereo_demod_sptr;
 #else
 typedef std::shared_ptr<stereo_demod> stereo_demod_sptr;
 #endif

@@ -30,7 +30,7 @@
 class rx_nb_cc;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<rx_nb_cc> rx_nb_cc_sptr;
+typedef std::shared_ptr<rx_nb_cc> rx_nb_cc_sptr;
 #else
 typedef std::shared_ptr<rx_nb_cc> rx_nb_cc_sptr;
 #endif

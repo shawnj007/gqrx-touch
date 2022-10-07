@@ -34,7 +34,7 @@
 class downconverter_cc;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<downconverter_cc> downconverter_cc_sptr;
+typedef std::shared_ptr<downconverter_cc> downconverter_cc_sptr;
 #else
 typedef std::shared_ptr<downconverter_cc> downconverter_cc_sptr;
 #endif

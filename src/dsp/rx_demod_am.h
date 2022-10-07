@@ -35,8 +35,8 @@ class rx_demod_am;
 class rx_demod_amsync;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<rx_demod_am> rx_demod_am_sptr;
-typedef boost::shared_ptr<rx_demod_amsync> rx_demod_amsync_sptr;
+typedef std::shared_ptr<rx_demod_am> rx_demod_am_sptr;
+typedef std::shared_ptr<rx_demod_amsync> rx_demod_amsync_sptr;
 #else
 typedef std::shared_ptr<rx_demod_am> rx_demod_am_sptr;
 typedef std::shared_ptr<rx_demod_amsync> rx_demod_amsync_sptr;

@@ -1,0 +1,170 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "C"
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_C
+  "/home/proton/gits/gqrx-touch/src/dsp/afsk1200/costabf.c" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/afsk1200/costabf.c.o"
+  )
+set(CMAKE_C_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_C
+  "BOOST_ALL_NO_LIB"
+  "BOOST_ATOMIC_DYN_LINK"
+  "BOOST_FILESYSTEM_DYN_LINK"
+  "BOOST_PROGRAM_OPTIONS_DYN_LINK"
+  "BOOST_REGEX_DYN_LINK"
+  "BOOST_SYSTEM_DYN_LINK"
+  "BOOST_THREAD_DYN_LINK"
+  "CUSTOM_AIRSPY_KERNELS"
+  "FFTW3F_THREADS"
+  "GNURADIO_VERSION=198920"
+  "GR_CTRLPORT"
+  "GR_MPLIB_GMP"
+  "GR_PERFORMANCE_COUNTERS"
+  "LOG4CPP_FIX_ERROR_COLLISION=1"
+  "QT_CORE_LIB"
+  "QT_GUI_LIB"
+  "QT_NETWORK_LIB"
+  "QT_NO_DEBUG"
+  "QT_NO_DEBUG_OUTPUT"
+  "QT_SVG_LIB"
+  "QT_WIDGETS_LIB"
+  "RELEASE"
+  "VERSION=\"\""
+  "WITH_PULSEAUDIO"
+  )
+
+# The include file search paths:
+set(CMAKE_C_TARGET_INCLUDE_PATH
+  "src"
+  "../src"
+  "src/gqrx_autogen/include"
+  "../include"
+  "/usr/include/x86_64-linux-gnu/qt5"
+  "/usr/include/x86_64-linux-gnu/qt5/QtCore"
+  "/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"
+  "/usr/include/x86_64-linux-gnu/qt5/QtNetwork"
+  "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
+  "/usr/include/x86_64-linux-gnu/qt5/QtGui"
+  "/usr/include/x86_64-linux-gnu/qt5/QtSvg"
+  "/usr/include/python3.8"
+  )
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/proton/gits/gqrx-touch/src/applications/gqrx/file_resources.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/applications/gqrx/file_resources.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/applications/gqrx/main.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/applications/gqrx/main.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/applications/gqrx/mainwindow_touch.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/applications/gqrx/mainwindow_touch.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/applications/gqrx/receiver.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/applications/gqrx/receiver.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/applications/gqrx/recentconfig.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/applications/gqrx/recentconfig.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/applications/gqrx/remote_control.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/applications/gqrx/remote_control.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/applications/gqrx/remote_control_settings.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/applications/gqrx/remote_control_settings.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/afsk1200/cafsk12.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/afsk1200/cafsk12.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/agc_impl.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/agc_impl.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/correct_iq_cc.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/correct_iq_cc.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/downconverter.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/downconverter.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/filter/fir_decim.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/filter/fir_decim.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/fm_deemph.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/fm_deemph.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/lpf.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/lpf.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/rds/decoder_impl.cc" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/rds/decoder_impl.cc.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/rds/parser_impl.cc" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/rds/parser_impl.cc.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/resampler_xx.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/resampler_xx.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/rx_agc_xx.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/rx_agc_xx.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/rx_demod_am.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/rx_demod_am.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/rx_demod_fm.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/rx_demod_fm.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/rx_fft.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/rx_fft.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/rx_filter.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/rx_filter.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/rx_meter.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/rx_meter.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/rx_noise_blanker_cc.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/rx_noise_blanker_cc.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/rx_rds.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/rx_rds.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/sniffer_f.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/sniffer_f.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/dsp/stereo_demod.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/dsp/stereo_demod.cpp.o"
+  "/home/proton/gits/gqrx-touch/build/src/gqrx_autogen/mocs_compilation.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/gqrx_autogen/mocs_compilation.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/interfaces/udp_sink_f.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/interfaces/udp_sink_f.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/pulseaudio/pa_device_list.cc" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/pulseaudio/pa_device_list.cc.o"
+  "/home/proton/gits/gqrx-touch/src/pulseaudio/pa_sink.cc" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/pulseaudio/pa_sink.cc.o"
+  "/home/proton/gits/gqrx-touch/src/pulseaudio/pa_source.cc" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/pulseaudio/pa_source.cc.o"
+  "/home/proton/gits/gqrx-touch/build/src/qrc_icons.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qrc_icons.cpp.o"
+  "/home/proton/gits/gqrx-touch/build/src/qrc_textfiles.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qrc_textfiles.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/afsk1200win.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/afsk1200win.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/agc_options.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/agc_options.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/audio_options.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/audio_options.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/bandplan.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/bandplan.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/bookmarks.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/bookmarks.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/bookmarkstablemodel.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/bookmarkstablemodel.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/bookmarkstaglist.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/bookmarkstaglist.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/ctk/ctkRangeSlider.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/ctk/ctkRangeSlider.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/demod_options.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/demod_options.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/dockaudio.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/dockaudio.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/dockbookmarks.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/dockbookmarks.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/dockfft.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/dockfft.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/dockinputctl.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/dockinputctl.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/dockrds.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/dockrds.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/dockrxopt.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/dockrxopt.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/docktouchcontrols.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/docktouchcontrols.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/dxc_options.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/dxc_options.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/dxc_spots.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/dxc_spots.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/freqctrl.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/freqctrl.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/ioconfig.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/ioconfig.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/iq_tool.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/iq_tool.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/meter.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/meter.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/nb_options.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/nb_options.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/plotter.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/plotter.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/qtgui/qtcolorpicker.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/qtgui/qtcolorpicker.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/receivers/nbrx.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/receivers/nbrx.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/receivers/receiver_base.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/receivers/receiver_base.cpp.o"
+  "/home/proton/gits/gqrx-touch/src/receivers/wfmrx.cpp" "/home/proton/gits/gqrx-touch/build/src/CMakeFiles/gqrx.dir/receivers/wfmrx.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "BOOST_ALL_NO_LIB"
+  "BOOST_ATOMIC_DYN_LINK"
+  "BOOST_FILESYSTEM_DYN_LINK"
+  "BOOST_PROGRAM_OPTIONS_DYN_LINK"
+  "BOOST_REGEX_DYN_LINK"
+  "BOOST_SYSTEM_DYN_LINK"
+  "BOOST_THREAD_DYN_LINK"
+  "CUSTOM_AIRSPY_KERNELS"
+  "FFTW3F_THREADS"
+  "GNURADIO_VERSION=198920"
+  "GR_CTRLPORT"
+  "GR_MPLIB_GMP"
+  "GR_PERFORMANCE_COUNTERS"
+  "LOG4CPP_FIX_ERROR_COLLISION=1"
+  "QT_CORE_LIB"
+  "QT_GUI_LIB"
+  "QT_NETWORK_LIB"
+  "QT_NO_DEBUG"
+  "QT_NO_DEBUG_OUTPUT"
+  "QT_SVG_LIB"
+  "QT_WIDGETS_LIB"
+  "RELEASE"
+  "VERSION=\"\""
+  "WITH_PULSEAUDIO"
+  )
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "src"
+  "../src"
+  "src/gqrx_autogen/include"
+  "../include"
+  "/usr/include/x86_64-linux-gnu/qt5"
+  "/usr/include/x86_64-linux-gnu/qt5/QtCore"
+  "/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"
+  "/usr/include/x86_64-linux-gnu/qt5/QtNetwork"
+  "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
+  "/usr/include/x86_64-linux-gnu/qt5/QtGui"
+  "/usr/include/x86_64-linux-gnu/qt5/QtSvg"
+  "/usr/include/python3.8"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

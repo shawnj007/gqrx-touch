@@ -113,19 +113,15 @@ dc_blocker_cc::~dc_blocker_cc()
 {
     
 }
+
 /*
-dc_blocker_cc::set_delay_line(int D)
+correctiq_auto_sptr make_correctiq_auto(double samp_rate,
+                                                  double freq,
+                                                  float gain,
+                                                  float sync_window)
 {
-    d_delay = D;
-
-    qDebug() << "DC Blocker Delay Line Length:" << d_delay;
-}
-
-dc_blocker_cc::set_long_form(bool long_form)
-{
-    d_long_form = long_form;
-
-    qDebug() << "DC Blocker Long Form: " << (d_delay?"enabled":"disabled");
+    return gnuradio::get_initial_sptr(new correctiq_auto_impl(samp_rate, freq, gain, sync_window));
+    
 }
 */
 

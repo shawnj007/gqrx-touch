@@ -36,7 +36,7 @@
 class lpf_ff;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<lpf_ff> lpf_ff_sptr;
+typedef std::shared_ptr<lpf_ff> lpf_ff_sptr;
 #else
 typedef std::shared_ptr<lpf_ff> lpf_ff_sptr;
 #endif

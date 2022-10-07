@@ -30,6 +30,8 @@
 #include <gnuradio/filter/single_pole_iir_filter_cc.h>
 #include <gnuradio/filter/dc_blocker_cc.h>
 
+#include <gnuradio/blocks/correctiq_auto.h>
+
 #if GNURADIO_VERSION < 0x030800
 #include <gnuradio/blocks/sub_cc.h>
 #else
@@ -39,14 +41,17 @@
 class dc_corr_cc;
 class dc_blocker_cc;
 class iq_swap_cc;
+class correctiq_auto;
 
 #if GNURADIO_VERSION < 0x030900
 typedef boost::shared_ptr<dc_corr_cc> dc_corr_cc_sptr;
 typedef boost::shared_ptr<dc_blocker_cc> dc_blocker_cc_sptr;
+//typedef boost::shared_ptr<correctiq_auto> correctiq_auto_sptr
 typedef boost::shared_ptr<iq_swap_cc> iq_swap_cc_sptr;
 #else
 typedef std::shared_ptr<dc_corr_cc> dc_corr_cc_sptr;
 typedef std::shared_ptr<dc_blocker_cc> dc_blocker_cc_sptr;
+typedef std::shared_ptr<correctiq_auto> correctiq_auto_sptr;
 typedef std::shared_ptr<iq_swap_cc> iq_swap_cc_sptr;
 #endif
 
@@ -90,8 +95,6 @@ private:
     double d_tau;    /*!< Time constant. */
     double d_alpha;  /*!< 1/(1+tau/T). */
 };
-
-
 
 /*! \brief a computationally efficient controllable DC blocker
  *  \ingroup DSP

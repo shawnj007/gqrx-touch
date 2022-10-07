@@ -42,8 +42,8 @@ class rx_fft_c;
 class rx_fft_f;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<rx_fft_c> rx_fft_c_sptr;
-typedef boost::shared_ptr<rx_fft_f> rx_fft_f_sptr;
+typedef std::shared_ptr<rx_fft_c> rx_fft_c_sptr;
+typedef std::shared_ptr<rx_fft_f> rx_fft_f_sptr;
 #else
 typedef std::shared_ptr<rx_fft_c> rx_fft_c_sptr;
 typedef std::shared_ptr<rx_fft_f> rx_fft_f_sptr;

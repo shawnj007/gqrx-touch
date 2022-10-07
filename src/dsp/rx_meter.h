@@ -35,7 +35,7 @@
 class rx_meter_c;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<rx_meter_c> rx_meter_c_sptr;
+typedef std::shared_ptr<rx_meter_c> rx_meter_c_sptr;
 #else
 typedef std::shared_ptr<rx_meter_c> rx_meter_c_sptr;
 #endif

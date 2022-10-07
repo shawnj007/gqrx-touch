@@ -90,6 +90,9 @@ public:
     void    setDcCancel(bool enabled);
     bool    dcCancel(void);
 
+    void    setDcTune(bool enabled);
+    bool    dcTune(void);
+
     void    setIqBalance(bool enabled);
     bool    iqBalance(void);
 
@@ -116,6 +119,7 @@ signals:
     void iqSwapChanged(bool reverse);
     void dcBlockChanged(bool enabled);
     void dcCancelChanged(bool enabled);
+    void dcTuneChanged(bool enabled);
     void iqBalanceChanged(bool enabled);
     void ignoreLimitsChanged(bool ignore);
     void antennaSelected(QString antenna);
@@ -132,6 +136,7 @@ private slots:
     void on_iqSwapButton_toggled(bool checked);
     void on_dcBlockButton_toggled(bool checked);
     void on_dcCancelButton_toggled(bool checked);
+    void on_dcTuneButton_toggled(bool checked);
     void on_iqBalanceButton_toggled(bool checked);
     void on_ignoreButton_toggled(bool checked);
     void on_antSelector_currentIndexChanged(int index);

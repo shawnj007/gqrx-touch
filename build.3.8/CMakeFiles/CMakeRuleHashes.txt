@@ -1,0 +1,22 @@
+# Hashes of file build rules.
+bd16a8f1957bd7cf20a691a699a42723 CMakeFiles/uninstall
+e415065f482d37bd037e727481694a80 src/CMakeFiles/gqrx_autogen
+e42d8766fbb2c5cffa36ae5ab4df8055 src/qrc_icons.cpp
+3805af6b145978a412d2c133717706ae src/qrc_textfiles.cpp
+3f8e3e3940f93aa566efe99a5b15fd42 src/ui_afsk1200win.h
+c8e759b768e511b1f8ccf3e63ca079d7 src/ui_agc_options.h
+9d92daaf4dfb0e1ba20ee9e79490aa7f src/ui_audio_options.h
+0ae6c974275ef64a0268aa07b971a2f2 src/ui_demod_options.h
+bebfd5a574930a6de12c0c6419fc2bde src/ui_dockaudio.h
+d2ba02fc0485279a32e60f86fe3323cf src/ui_dockbookmarks.h
+f51e897823d3408e5ee037478e942850 src/ui_dockfft.h
+6d2f27c6f37ed955a315ed51c8d6613d src/ui_dockinputctl.h
+ba9cdccb3908860c6e945d88c184df6d src/ui_dockrds.h
+840bb0fd26dd8e853240232509d12d5a src/ui_dockrxopt.h
+618e7ae074af687120a0c89908cc4bc1 src/ui_docktouchcontrols.h
+0442e893af4a7f44e3be79f6cf36435c src/ui_dxc_options.h
+ed2ea605fb6de4e4c53ea6f4ab1988e2 src/ui_ioconfig.h
+38ed2ebef8987423842de832cbcb6b29 src/ui_iq_tool.h
+d089521c64dcc41d46b0d715c686472f src/ui_mainwindow_touch.h
+4cab07f0699a73328236f72a93e408f2 src/ui_nb_options.h
+b977e4cf714d161c2d53e0e00795173a src/ui_remote_control_settings.h

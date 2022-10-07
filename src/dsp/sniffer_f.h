@@ -34,7 +34,7 @@
 class sniffer_f;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<sniffer_f> sniffer_f_sptr;
+typedef std::shared_ptr<sniffer_f> sniffer_f_sptr;
 #else
 typedef std::shared_ptr<sniffer_f> sniffer_f_sptr;
 #endif

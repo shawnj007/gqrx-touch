@@ -33,7 +33,7 @@
 class fir_decim_cc;
 
 #if GNURADIO_VERSION < 0x030900
-typedef boost::shared_ptr<fir_decim_cc> fir_decim_cc_sptr;
+typedef std::shared_ptr<fir_decim_cc> fir_decim_cc_sptr;
 #else
 typedef std::shared_ptr<fir_decim_cc> fir_decim_cc_sptr;
 #endif
