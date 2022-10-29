@@ -1378,29 +1378,36 @@ void CPlotter::drawOverlay()
                                                                 m_CenterFreq + m_FftCenter + m_Span / 2);
         
         int bandLevel = 0;
-        int last_left = 0;
+        qint64 last_max = 0;
+        qint64 last_max_0 = 0;
         
         std::sort(bands.begin(), bands.end(), [=]( const BandInfo& band1 , const BandInfo& band2 )->bool {
             if (band1.minFrequency == band2.minFrequency) {
-                return band1.name < band2.name;
+                if (band1.maxFrequency != band2.maxFrequency) 
+                    return band1.maxFrequency > band2.maxFrequency;
+                else
+                    return band1.name < band2.name;
             }
             return band1.minFrequency < band2.minFrequency;
         });
         
         for (auto & band : bands)
         {
+            if (band.minFrequency >= last_max_0) {
+                bandLevel = 0;
+                last_max = band.maxFrequency;
+                last_max_0 = last_max;
+            } else if (band.minFrequency < last_max) {
+                --bandLevel;
+                last_max = band.maxFrequency;
+            } else if (band.minFrequency == last_max) {
+                last_max = band.maxFrequency;
+            }
+            
             int band_left = xFromFreq(band.minFrequency);
             int band_right = xFromFreq(band.maxFrequency);
             int band_width = band_right - band_left;
-            
-            if (band_left < last_left) {
-                --bandLevel;
-            } else {
-                bandLevel = 0;
-            }
             int band_bottom = bandLevel * m_BandPlanHeight;
-            
-            last_left = band_right;
             
             rect.setRect(band_left, xAxisTop - m_BandPlanHeight + band_bottom, band_width, m_BandPlanHeight);
             painter.fillRect(rect, band.color);

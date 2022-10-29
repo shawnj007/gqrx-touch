@@ -121,6 +121,7 @@ receiver::receiver(const std::string input_device,
     iq_fft = make_rx_fft_c(8192u, d_decim_rate, gr::fft::window::WIN_HANN);
 
 	dc_auto = gr::blocks::correctiq_auto::make(d_decim_rate, d_rf_freq, DEFAULT_AUDIO_GAIN, 1.0);
+	dc_sub   = gr::blocks::sub_cc::make(1);
 
     audio_fft = make_rx_fft_f(8192u, d_audio_rate, gr::fft::window::WIN_HANN);
     audio_gain0 = gr::blocks::multiply_const_ff::make(0);
@@ -1416,8 +1417,14 @@ void receiver::connect_all(rx_chain type)
     
     if (d_dc_tune)
     {
-        tb->connect(b, 0, dc_auto, 0);
-        b = dc_auto;
+        //tb->connect(b, 0, dc_auto, 0);
+        
+    	tb->connect(b,       0, dc_auto, 0);
+		tb->connect(b,       0, dc_sub, 0);
+		tb->connect(dc_auto, 0, dc_sub, 1);
+		tb->connect(dc_sub,  0, b, 0);
+        
+        b = dc_sub;
     }
 
     // Visualization

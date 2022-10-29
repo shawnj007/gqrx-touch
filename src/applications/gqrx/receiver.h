@@ -277,6 +277,7 @@ private:
     iq_swap_cc_sptr           iq_swap;   /*!< I/Q swapping block. */
     
     gr::blocks::correctiq_auto::sptr dc_auto;
+    gr::blocks::sub_cc::sptr         dc_sub;
 
     rx_fft_c_sptr             iq_fft;     /*!< Baseband FFT block. */
     rx_fft_f_sptr             audio_fft;  /*!< Audio FFT block. */

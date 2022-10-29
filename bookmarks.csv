@@ -1,0 +1,141 @@
+# Tag name          ;  color
+Untagged            ; #c0c0c0
+Voice               ; #c0c0c0
+DSD                 ; #c0c0c0
+City                ; #c0c0c0
+Utility             ; #c0c0c0
+FD\PD               ; #c0c0c0
+NWS                 ; #c0c0c0
+FM Music            ; #c0c0c0
+County              ; #c0c0c0
+DMR                 ; #c0c0c0
+Airport             ; #c0c0c0
+UND                 ; #c0c0c0
+
+# Frequency ; Name                     ; Modulation          ;  Bandwidth; Tags
+  1582872500; ?                        ; AM                  ;      10000; Untagged
+  1568576000; ?                        ; AM                  ;      10000; Untagged
+   952095000; ?                        ; Narrow FM           ;      13000; Untagged
+   931338000; ?                        ; Narrow FM           ;      13000; Untagged
+   929938500; ?                        ; Narrow FM           ;      48000; Untagged
+   929340000; ?                        ; Narrow FM           ;      19800; Untagged
+   925000000; ?                        ; Narrow FM           ;      19800; Untagged
+   921600000; ?                        ; Narrow FM           ;      48000; Untagged
+   921101500; ?                        ; Narrow FM           ;      48000; Untagged
+   861963500; ?                        ; Narrow FM           ;      13000; DMR
+   860865000; ?                        ; Narrow FM           ;      48000; Untagged
+   860815000; ?                        ; Narrow FM           ;      48000; Untagged
+   859338000; ?                        ; Narrow FM           ;      48000; Untagged
+   858815000; ?                        ; Narrow FM           ;      48000; Untagged
+   858340000; ?                        ; Narrow FM           ;      48000; Untagged
+   857765000; ?                        ; Narrow FM           ;      48000; Untagged
+   857340000; ?                        ; Narrow FM           ;      48000; Untagged
+   856190000; ?                        ; Narrow FM           ;      48000; Untagged
+   855940000; ?                        ; Narrow FM           ;      48000; Untagged
+   855863600; ?                        ; Narrow FM           ;      48000; Untagged
+   855437500; ?                        ; Narrow FM           ;      48000; Untagged
+   854913000; ?                        ; Narrow FM           ;      10000; Untagged
+   854138000; ?                        ; Narrow FM           ;      20000; Untagged
+   853413000; ?                        ; Narrow FM           ;      48000; Untagged
+   853188000; ?                        ; Narrow FM           ;      48000; Untagged
+   852913000; ?                        ; Narrow FM           ;      48000; Untagged
+   852688000; ?                        ; Narrow FM           ;      48000; Untagged
+   851875000; ?                        ; Narrow FM           ;      48000; Untagged
+   594000000; ?                        ; AM                  ;      80000; Untagged
+   518400000; ?                        ; AM                  ;      10000; Untagged
+   480000000; ?                        ; AM                  ;      10000; Untagged
+   463651000; ?                        ; Narrow FM           ;      10000; DMR
+   463564000; ?                        ; Narrow FM           ;      10000; DMR
+   463238000; ?                        ; Narrow FM           ;      10000; DMR
+   463213000; ?                        ; Narrow FM           ;      10000; DMR
+   451050000; FD Disp                  ; Narrow FM           ;      20000; FD\PD,DSD,County
+   432000000; ?                        ; Narrow FM           ;      25800; Untagged
+   408000000; ?                        ; Narrow FM           ;      25800; Untagged
+   375000000; ?                        ; Narrow FM           ;      20000; Untagged
+   350350000; GFK Tower                ; AM                  ;      10000; Airport
+   350000000; ?                        ; Narrow FM           ;      10000; Untagged
+   336000000; ?                        ; Narrow FM           ;      10000; Untagged
+   333820000; ?                        ; Narrow FM           ;      10000; Untagged
+   325000000; ?                        ; Narrow FM           ;      10000; Untagged
+   316800000; ?                        ; Narrow FM           ;      10000; Untagged
+   312000000; ?                        ; Narrow FM           ;      10000; Untagged
+   302400000; ?                        ; Narrow FM           ;      10000; Untagged
+   300000000; ?                        ; Narrow FM           ;      14000; Untagged
+   288000000; ?                        ; Narrow FM           ;      10000; Untagged
+   243000000; Emergency                ; Narrow FM           ;      10000; Airport,Voice
+   240000000; ?                        ; Narrow FM           ;      10000; Untagged
+   230400000; ?                        ; Narrow FM           ;      20000; Untagged
+   225000000; ?                        ; Narrow FM           ;      10000; Untagged
+   221413000; ?                        ; Narrow FM           ;      20000; Untagged
+   168000000; ?                        ; AM                  ;      10000; Untagged
+   162712500; ?                        ; Narrow FM           ;      10000; Untagged
+   162475000; NWS GFK                  ; Narrow FM           ;      10000; NWS
+   162400000; ?                        ; Narrow FM           ;      10000; NWS
+   161790000; ?                        ; Narrow FM           ;      10000; NWS
+   161160000; BNSF                     ; Narrow FM           ;      10000; Voice
+   161100000; ?                        ; Narrow FM           ;      12000; Untagged
+   160410000; BNSF                     ; Narrow FM           ;      10000; Voice
+   158865000; ?                        ; Narrow FM           ;      20000; Voice
+   158730000; UND PD                   ; Narrow FM           ;      20000; FD\PD,DSD,UND
+   157365000; ?                        ; Narrow FM           ;      20000; Untagged
+   156505000; ?                        ; Narrow FM           ;      20000; Untagged
+   155985000; Sheriff Disp             ; Narrow FM           ;      10000; FD\PD,DSD,County
+   155685000; Sheriff Disp             ; Narrow FM           ;      10000; FD\PD,DSD,County
+   155595000; UND PD                   ; Narrow FM           ;      12000; FD\PD,DSD,UND
+   155565000; PD Disp                  ; Narrow FM           ;      16000; FD\PD,DSD,City
+   155340000; ?                        ; Narrow FM           ;      20000; DSD
+   154500000; ?                        ; Narrow FM           ;      20000; Untagged
+   154355000; UND PD                   ; Narrow FM           ;      20000; FD\PD,DSD,UND
+   154040000; GFK Fire                 ; Narrow FM           ;      20000; Airport,FD\PD
+   153890000; FD Disp                  ; Narrow FM           ;      20000; FD\PD,DSD,City
+   153485000; Xcel Elec                ; Narrow FM           ;      20000; Utility
+   153410000; Nodak Elec               ; Narrow FM           ;      20000; Utility
+   152375000; ?                        ; AM                  ;      10000; Untagged
+   152000000; ?                        ; AM                  ;      10000; Untagged
+   151980000; ?                        ; AM                  ;      10000; Untagged
+   124575000; GFK Ground               ; AM                  ;      20000; Airport
+   122950000; GFK Unicom               ; AM                  ;      20000; Airport
+   121500000; Emergency                ; Narrow FM           ;      10000; Airport,Voice
+   120550000; GFK Tower                ; AM                  ;      20000; Airport
+   119400000; GFK ATIS                 ; AM                  ;      20000; Airport
+   118400000; GFK Tower/CTAF           ; AM                  ;      20000; Airport
+   118100000; GFK App/Dep              ; AM                  ;      20000; Airport
+   116735000; ?                        ; AM                  ;      20000; Untagged
+   115200000;                          ; AM                  ;      10000; Untagged
+   107900000; KNOX                     ; WFM (stereo)        ;     150000; FM Music
+   107500000; KJ 108                   ; WFM (stereo)        ;     240000; FM Music
+   105500000; KKEQ                     ; WFM (stereo)        ;     200000; FM Music
+   105100000; ?                        ; WFM (stereo)        ;     200000; Untagged
+   104900000; Your QFM                 ; WFM (stereo)        ;     200000; FM Music
+   104700000; ?                        ; WFM (stereo)        ;     200000; Untagged
+   104300000; Cities 104.3             ; WFM (stereo)        ;     200000; FM Music
+   103300000; ?                        ; WFM (stereo)        ;     200000; Untagged
+   102700000; MPR                      ; WFM (stereo)        ;     120000; FM Music
+   101900000; Jack FM                  ; WFM (stereo)        ;     160000; FM Music
+   100300000; KSNR                     ; WFM (stereo)        ;     200000; FM Music
+    99700000; K259AF                   ; WFM (stereo)        ;     200000; FM Music
+    97700000; ?                        ; WFM (stereo)        ;     200000; Untagged
+    97100000; KYCK                     ; WFM (stereo)        ;     200000; FM Music
+    96100000; I <3 Radio               ; WFM (stereo)        ;     200000; FM Music
+    95700000; Rock 95                  ; WFM (stereo)        ;     200000; FM Music
+    95300000; K-Love                   ; WFM (stereo)        ;     200000; FM Music
+    94700000; Z947                     ; WFM (stereo)        ;     200000; FM Music
+    92900000; XL93                     ; WFM (stereo)        ;     240000; FM Music
+    92500000; K223DF                   ; WFM (stereo)        ;     200000; FM Music
+    92100000; KROX                     ; WFM (stereo)        ;     200000; FM Music
+    91500000; KQMN                     ; WFM (stereo)        ;     200000; FM Music
+    90700000; PPB                      ; WFM (stereo)        ;     200000; FM Music
+    90100000; ?                        ; WFM (stereo)        ;     200000; Untagged
+    89300000; NPR                      ; WFM (stereo)        ;     200000; FM Music
+    88900000; ?                        ; WFM (stereo)        ;     200000; Untagged
+    88300000; KEQQ                     ; WFM (stereo)        ;     200000; FM Music
+    88100000; ?                        ; WFM (stereo)        ;     200000; Untagged
+    76800000; ?                        ; AM                  ;      10000; Untagged
+    74752500; ?                        ; AM                  ;      10000; Untagged
+    73725000; ?                        ; Narrow FM           ;      20000; Untagged
+    72705000; ?                        ; AM                  ;      10000; Untagged
+    72240000; ?                        ; Narrow FM           ;      20000; Untagged
+    70655000; ?                        ; AM                  ;      10000; Untagged
+    68610000; ?                        ; AM                  ;      10000; Untagged
+    66560000; ?                        ; AM                  ;      10000; Untagged
+    64512500; ?                        ; AM                  ;      10000; Untagged
