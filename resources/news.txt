@@ -1,4 +1,11 @@
 
+   2.15.10: In progress...
+
+       NEW: Restore FFT zoom level between sessions.
+       NEW: Restore peak detect & peak hold between sessions.
+  IMPROVED: AGC performance.
+
+
     2.15.9: Released April 9, 2022
 
        NEW: Qt 6 support.
