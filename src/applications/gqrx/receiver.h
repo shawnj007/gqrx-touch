@@ -141,6 +141,12 @@ public:
 
     void        set_dc_cancel(bool enable);
     bool        get_dc_cancel(void) const;
+    
+    void        set_dc_blocker(bool enable);
+    bool        get_dc_blocker(void) const;
+    
+    void        set_dc_tune(bool enable);
+    bool        get_dc_tune(void) const;
 
     void        set_iq_balance(bool enable);
     bool        get_iq_balance(void) const;
@@ -251,6 +257,8 @@ private:
     bool        d_sniffer_active;   /*!< Only one data decoder allowed. */
     bool        d_iq_rev;           /*!< Whether I/Q is reversed or not. */
     bool        d_dc_cancel;        /*!< Enable automatic DC removal. */
+    bool        d_dc_blocker;       /*!< Enable automatic DC blocking. */
+    bool        d_dc_tune;       	/*!< Enable automatic DC tuning. */
     bool        d_iq_balance;       /*!< Enable automatic IQ balance. */
 
     std::string input_devstr;  /*!< Current input device string. */
@@ -265,7 +273,11 @@ private:
     receiver_base_cf_sptr     rx;        /*!< receiver. */
 
     dc_corr_cc_sptr           dc_corr;   /*!< DC corrector block. */
+    dc_blocker_cc_sptr        dc_block;  /*!< DC blocker block. */
     iq_swap_cc_sptr           iq_swap;   /*!< I/Q swapping block. */
+    
+    gr::blocks::correctiq_auto::sptr dc_auto;
+    gr::blocks::sub_cc::sptr         dc_sub;
 
     rx_fft_c_sptr             iq_fft;     /*!< Baseband FFT block. */
     rx_fft_f_sptr             audio_fft;  /*!< Audio FFT block. */

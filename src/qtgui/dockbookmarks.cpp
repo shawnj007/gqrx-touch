@@ -29,11 +29,13 @@
 #include <QMenu>
 #include <QMessageBox>
 
-#include "bookmarks.h"
-#include "bookmarkstaglist.h"
-#include "dockbookmarks.h"
 #include "dockrxopt.h"
 #include "qtcolorpicker.h"
+
+#include "bookmarks.h"
+#include "bookmarkstaglist.h"
+
+#include "dockbookmarks.h"
 #include "ui_dockbookmarks.h"
 
 DockBookmarks::DockBookmarks(QWidget *parent) :
