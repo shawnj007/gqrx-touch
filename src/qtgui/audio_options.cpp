@@ -24,9 +24,21 @@
 #include <QPalette>
 #include <QDebug>
 
-#include "audio_options.h"
-#include "ui_audio_options.h"
+#include "ui_dockaudio.h"
+#include "qtgui/dockaudio.h"
+//#include "ui_audio_options.h"
 
+CAudioOptions::CAudioOptions(QWidget *parent, Ui::DockAudio* ui) :
+    QDialog(parent),
+    ui(ui)
+{
+    work_dir = new QDir();
+
+    error_palette = new QPalette();
+    error_palette->setColor(QPalette::Text, Qt::red);
+}
+
+/*
 CAudioOptions::CAudioOptions(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::CAudioOptions)
@@ -37,13 +49,13 @@ CAudioOptions::CAudioOptions(QWidget *parent) :
 
     error_palette = new QPalette();
     error_palette->setColor(QPalette::Text, Qt::red);
-}
+}*/
 
 CAudioOptions::~CAudioOptions()
 {
     delete work_dir;
     delete error_palette;
-    delete ui;
+    //delete ui;
 }
 
 
@@ -95,7 +107,6 @@ void CAudioOptions::setUdpStereo(bool stereo)
 {
     ui->udpStereo->setChecked(stereo);
 }
-
 
 void CAudioOptions::setFftSplit(int pct_2d)
 {
