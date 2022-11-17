@@ -1376,6 +1376,7 @@ void CPlotter::drawOverlay()
     {
         QList<BandInfo> bands = BandPlan::Get().getBandsInRange(m_CenterFreq + m_FftCenter - m_Span / 2,
                                                                 m_CenterFreq + m_FftCenter + m_Span / 2);
+        
         int bandLevel = 0;
         qint64 last_max = 0;
         qint64 last_max_0 = 0;
