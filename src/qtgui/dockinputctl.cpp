@@ -58,6 +58,9 @@ void DockInputCtl::readSettings(QSettings * settings)
     setDcCancel(settings->value("input/dc_cancel", false).toBool());
     emit dcCancelChanged(ui->dcCancelButton->isChecked());
 
+    setDcBlock(settings->value("input/dc_block", false).toBool());
+    emit dcBlockChanged(ui->dcBlockButton->isChecked());
+
     setIqBalance(settings->value("input/iq_balance", false).toBool());
     emit iqBalanceChanged(ui->iqBalanceButton->isChecked());
 
@@ -297,6 +300,18 @@ bool DockInputCtl::iqSwap(void)
     return ui->iqSwapButton->isChecked();
 }
 
+/** Enable automatic DC blocker. */
+void DockInputCtl::setDcBlock(bool enabled)
+{
+    ui->dcBlockButton->setChecked(enabled);
+}
+
+/** Get current DC remove status. */
+bool DockInputCtl::dcBlock(void)
+{
+    return ui->dcBlockButton->isChecked();
+}
+
 /** Enable automatic DC removal. */
 void DockInputCtl::setDcCancel(bool enabled)
 {
@@ -385,15 +400,15 @@ void DockInputCtl::setGainStages(gain_list_t &gain_list)
         gain  = (int)(10.0 * gain_list[i].value);
 
         label = new QLabel(QString("%1 ").arg(gain_list[i].name.c_str()), this);
-        label->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
+        //label->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         value = new QLabel(QString(" %1 dB").arg(gain_list[i].value, 0, 'f', 1), this);
-        value->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
+        //value->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         slider = new QSlider(Qt::Horizontal, this);
         slider->setProperty("idx", i);
         slider->setProperty("name", QString(gain_list[i].name.c_str()));
-        slider->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Minimum);
+        //slider->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Minimum);
         slider->setRange(start, stop);
         slider->setSingleStep(step);
         slider->setValue(gain);
@@ -479,12 +494,30 @@ void DockInputCtl::on_iqSwapButton_toggled(bool checked)
 }
 
 /**
+ * DC block checkbox changed.
+ * @param checked True if DC blocker is enabled, false otherwise
+ */
+void DockInputCtl::on_dcBlockButton_toggled(bool checked)
+{
+    emit dcBlockChanged(checked);
+}
+
+/**
  * DC removal checkbox changed.
  * @param checked True if DC removal is enabled, false otherwise
  */
 void DockInputCtl::on_dcCancelButton_toggled(bool checked)
 {
     emit dcCancelChanged(checked);
+}
+
+/**
+ * DC removal checkbox changed.
+ * @param checked True if DC tune is enabled, false otherwise
+ */
+void DockInputCtl::on_dcTuneButton_toggled(bool checked)
+{
+	emit dcTuneChanged(checked);
 }
 
 /**

@@ -59,7 +59,7 @@ void Bookmarks::setConfigDir(const QString& cfg_dir)
 void Bookmarks::add(BookmarkInfo &info)
 {
     m_BookmarkList.append(info);
-    std::stable_sort(m_BookmarkList.begin(),m_BookmarkList.end());
+    std::stable_sort(m_BookmarkList.rbegin(),m_BookmarkList.rend());
     save();
     emit( BookmarksChanged() );
 }
@@ -139,7 +139,7 @@ bool Bookmarks::load()
             }
         }
         file.close();
-        std::stable_sort(m_BookmarkList.begin(),m_BookmarkList.end());
+        std::stable_sort(m_BookmarkList.rbegin(),m_BookmarkList.rend());
 
         emit BookmarksChanged();
         return true;
@@ -213,9 +213,9 @@ QList<BookmarkInfo> Bookmarks::getBookmarksInRange(qint64 low, qint64 high)
 {
     BookmarkInfo info;
     info.frequency=low;
-    QList<BookmarkInfo>::const_iterator lb = std::lower_bound(m_BookmarkList.begin(), m_BookmarkList.end(), info);
+    QList<BookmarkInfo>::reverse_iterator lb = std::lower_bound(m_BookmarkList.rbegin(), m_BookmarkList.rend(), info);
     info.frequency=high;
-    QList<BookmarkInfo>::const_iterator ub = std::upper_bound(m_BookmarkList.begin(), m_BookmarkList.end(), info);
+    QList<BookmarkInfo>::reverse_iterator ub = std::upper_bound(m_BookmarkList.rbegin(), m_BookmarkList.rend(), info);
 
     QList<BookmarkInfo> found;
 

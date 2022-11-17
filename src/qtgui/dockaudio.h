@@ -26,6 +26,7 @@
 #include <QColor>
 #include <QDockWidget>
 #include <QSettings>
+
 #include "audio_options.h"
 
 namespace Ui {
@@ -66,6 +67,8 @@ public:
 
     void saveSettings(QSettings *settings);
     void readSettings(QSettings *settings);
+    
+    void resetAudioSpectrumZoom();
 
 public slots:
     void startAudioRecorder(void);
@@ -112,6 +115,15 @@ private slots:
     void setNewUdpPort(int port);
     void setNewUdpStereo(bool enabled);
 
+    void on_fftSplitSlider_valueChanged(int value);
+    void on_pandRangeSlider_valuesChanged(int min, int max);
+    void on_wfRangeSlider_valuesChanged(int min, int max);
+    void on_recDirEdit_textChanged(const QString &dir);
+    void on_recDirButton_clicked();
+    void on_udpHost_textChanged(const QString &text);
+    void on_udpPort_valueChanged(int port);
+    void on_udpStereo_stateChanged(int state);
+    void on_audioLockButton_toggled(bool checked);
 
 private:
     Ui::DockAudio *ui;

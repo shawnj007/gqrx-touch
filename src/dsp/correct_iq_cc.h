@@ -28,6 +28,9 @@
 #include <gnuradio/blocks/float_to_complex.h>
 #include <gnuradio/hier_block2.h>
 #include <gnuradio/filter/single_pole_iir_filter_cc.h>
+#include <gnuradio/filter/dc_blocker_cc.h>
+
+#include <gnuradio/blocks/correctiq_auto.h>
 
 #if GNURADIO_VERSION < 0x030800
 #include <gnuradio/blocks/sub_cc.h>
@@ -36,13 +39,19 @@
 #endif
 
 class dc_corr_cc;
+class dc_blocker_cc;
 class iq_swap_cc;
+class correctiq_auto;
 
 #if GNURADIO_VERSION < 0x030900
 typedef boost::shared_ptr<dc_corr_cc> dc_corr_cc_sptr;
+typedef boost::shared_ptr<dc_blocker_cc> dc_blocker_cc_sptr;
+//typedef boost::shared_ptr<correctiq_auto> correctiq_auto_sptr
 typedef boost::shared_ptr<iq_swap_cc> iq_swap_cc_sptr;
 #else
 typedef std::shared_ptr<dc_corr_cc> dc_corr_cc_sptr;
+typedef std::shared_ptr<dc_blocker_cc> dc_blocker_cc_sptr;
+typedef std::shared_ptr<correctiq_auto> correctiq_auto_sptr;
 typedef std::shared_ptr<iq_swap_cc> iq_swap_cc_sptr;
 #endif
 
@@ -51,6 +60,14 @@ typedef std::shared_ptr<iq_swap_cc> iq_swap_cc_sptr;
  *  \param tau The time constant for the filter
  */
 dc_corr_cc_sptr make_dc_corr_cc(double sample_rate, double tau=1.0);
+
+/*!
+ * Make a DC blocker block.
+ *
+ * \param D          (int) the length of the delay line
+ * \param long_form  (bool) whether to use long (true, default) or short form
+ */
+dc_blocker_cc_sptr make_dc_blocker_cc(int D, bool long_form);
 
 /*! \brief Single pole IIR filter-based DC offset correction block.
  *  \ingroup DSP
@@ -77,6 +94,34 @@ private:
     double d_sr;     /*!< Sample rate. */
     double d_tau;    /*!< Time constant. */
     double d_alpha;  /*!< 1/(1+tau/T). */
+};
+
+/*! \brief a computationally efficient controllable DC blocker
+ *  \ingroup DSP
+ *
+ * This block implements a computationally efficient DC blocker that produces a 
+ * tighter notch filter around DC for a smaller group delay than an equivalent 
+ * FIR filter or using a single pole IIR filter (though the IIR filter is 
+ * computationally cheaper).
+ */
+class dc_blocker_cc : public gr::hier_block2
+{
+    friend dc_blocker_cc_sptr make_dc_blocker_cc(int D, bool long_form);
+
+protected:
+    dc_blocker_cc(int D, bool long_form);
+
+public:
+    ~dc_blocker_cc();
+    //void set_delay_line(int D);
+    //void set_long_form(bool long_form);
+
+private:
+    gr::filter::dc_blocker_cc::sptr d_blk;
+    gr::blocks::sub_cc::sptr        d_sub;
+
+    int  d_delay;      /*!< Delay Line Length. */
+    bool d_long_form;  /*!< Long Form. */
 };
 
 
