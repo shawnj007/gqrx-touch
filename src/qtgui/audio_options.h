@@ -30,6 +30,7 @@
 
 namespace Ui {
     class CAudioOptions;
+    class DockAudio;
 }
 
 /*! \brief GUI widget for configuring audio options. */
@@ -38,7 +39,8 @@ class CAudioOptions : public QDialog
     Q_OBJECT
     
 public:
-    explicit CAudioOptions(QWidget *parent = 0);
+    explicit CAudioOptions(QWidget *parent = 0, Ui::DockAudio *ui = 0);
+    //explicit CAudioOptions(QWidget *parent = 0);
     ~CAudioOptions();
 
     void closeEvent(QCloseEvent *event);
@@ -62,6 +64,15 @@ public:
 
 public slots:
     void setPandapterSliderValues(float min, float max);
+    void on_audioLockButton_toggled(bool checked);
+    void on_fftSplitSlider_valueChanged(int value);
+    void on_pandRangeSlider_valuesChanged(int min, int max);
+    void on_wfRangeSlider_valuesChanged(int min, int max);
+    void on_recDirEdit_textChanged(const QString &text);
+    void on_recDirButton_clicked();
+    void on_udpHost_textChanged(const QString &text);
+    void on_udpPort_valueChanged(int port);
+    void on_udpStereo_stateChanged(int state);
 
 signals:
     void newFftSplit(int pct_2d);
@@ -76,18 +87,10 @@ signals:
     void newUdpStereo(bool enabled);
 
 private slots:
-    void on_fftSplitSlider_valueChanged(int value);
-    void on_pandRangeSlider_valuesChanged(int min, int max);
-    void on_wfRangeSlider_valuesChanged(int min, int max);
-    void on_audioLockButton_toggled(bool checked);
-    void on_recDirEdit_textChanged(const QString &text);
-    void on_recDirButton_clicked();
-    void on_udpHost_textChanged(const QString &text);
-    void on_udpPort_valueChanged(int port);
-    void on_udpStereo_stateChanged(int state);
 
 private:
-    Ui::CAudioOptions *ui;                   /*!< The user interface widget. */
+    //Ui::CAudioOptions *ui;                   /*!< The user interface widget. */
+    Ui::DockAudio         *ui;
     QDir              *work_dir;             /*!< Used for validating chosen directory. */
     QPalette          *error_palette;        /*!< Palette used to indicate an error. */
     bool               m_pand_last_modified; /*!< Flag to indicate which slider was changed last */

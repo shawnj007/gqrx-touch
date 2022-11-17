@@ -7,7 +7,6 @@ namespace Ui {
     class DockRDS;
 }
 
-
 class DockRDS : public QDockWidget
 {
     Q_OBJECT
