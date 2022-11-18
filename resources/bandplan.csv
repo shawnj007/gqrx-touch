@@ -50,7 +50,7 @@
 1800000,     1810000,     LSB, 10,  #508000FF, 160m Ham Band| Digital
 1810000,     1843000,     CW,  10,  #50FF0000, 160m
 1843000,     1995000,     LSB, 10,  #50FF0000, SSB SSTV (160m)
-1995000,     2000000,     CW,  10,  #503CCCFF, Experimental, Beacons |160m Ham Band
+1995000,     2000000,     CW,  10,  #503CCCFF, Experimental Beacons |160m Ham Band
 2000000,     2052100,     USB, 10,  #55008080, Maritime Mobile
 2052100,     2055100,     USB, 10,  #5500FF91, WEFAX Kodiak AK
 2055100,     2182000,     USB, 10,  #55008080, Maritime Mobile
