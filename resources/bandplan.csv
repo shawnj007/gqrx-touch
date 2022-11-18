@@ -1683,7 +1683,7 @@
 7211600000,  7221600000,  WFM, 100, #5500FFFF, GOES GRB
 7221600000,  7250000000,  WFM, 100, #553AFFFF, Earth-to-space Communications
 7250000000,  7737000000,  WFM, 100, #553AFFFF, Space-to-Earth Communications
-7737000000,  7887000000,  WFM, 100, #5500FFFF, NOAA-20/ SNPP SMD, and Other Satellite Downlinks
+7737000000,  7887000000,  WFM, 100, #5500FFFF, NOAA-20/ SNPP SMD and Other Satellite Downlinks
 7887000000,  7900000000,  WFM, 100, #553AFFFF, Space-to-Earth Communications
 7900000000,  8025000000,  WFM, 100, #553AFFFF, Earth-to-space Communications
 8025000000,  8130000000,  WFM, 100, #553AFFFF, Space-to-Earth and Earth-to-space Communications
